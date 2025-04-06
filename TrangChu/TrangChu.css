@@ -1,0 +1,527 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Roboto:wght@100..900&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+/*Navbar*/
+.navbar {
+  width: 100%;
+  position: fixed;
+  background-color: #272222;
+  top: 0;
+  left: 0;
+  align-items: center;
+  padding: 16px 0px 16px 25px;
+  display: flex;
+  z-index: 1000; /* Đảm bảo navbar nằm trên các phần tử khác */
+}
+
+.navbar a {
+  width: auto;
+  height: auto;
+}
+
+.navbar ul {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  display: flex;
+  gap: 60px;
+  margin-right: 40px;
+}
+
+.navbar ul li {
+  position: relative;
+  list-style: none;
+  margin: 9px 0 0 0;
+}
+
+.navbar ul li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-family: Arial;
+  word-wrap: break-word;
+  width: 100%;
+  font-weight: 400;
+  padding-bottom: 27px;
+}
+
+.navbar ul li a:hover {
+  color: #636363;
+  transition: all 0.1s ease-in-out;
+}
+
+.navbar a:hover img {
+  filter: brightness(0%);
+  transition: filter 0.3s ease;
+}
+
+.location img {
+  width: 32px;
+  height: 32px;
+  margin-bottom: -22px;
+}
+
+.logo {
+  width: 40px;
+  height: 30px;
+}
+
+.stick {
+  transform: rotate(90deg);
+  transform-origin: top left;
+  height: 1px;
+  width: 26px;
+  background-color: white;
+  margin-top: -3px;
+}
+
+/*Main*/
+.video-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main {
+  width: 100%;
+  height: 1000px; /* Giới hạn chiều cao nếu cần */
+  background-color: white;
+  margin: 0;
+  padding-top: 80px; /* Thêm khoảng cách đủ lớn cho navbar */
+  text-align: center;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+/*Navbar*/
+.navbar {
+  width: 100%;
+  position: fixed;
+  background-color: #272222;
+  top: 0;
+  left: 0;
+  align-items: center;
+  padding: 16px 0px 16px 25px;
+  display: flex;
+}
+
+.navbar a {
+  width: auto;
+  height: auto;
+}
+
+.navbar ul {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  display: flex;
+  gap: 60px;
+  margin-right: 40px;
+}
+
+.navbar ul li {
+  position: relative;
+  list-style: none;
+  margin: 9px 0 0 0;
+}
+
+.navbar ul li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-family: Arial;
+  word-wrap: break-word;
+  width: 100%;
+  font-weight: 400;
+  padding-bottom: 27px;
+}
+
+.navbar ul li a:hover {
+  color: #636363;
+  transition: all 0.1s ease-in-out;
+}
+
+.navbar a:hover img {
+  filter: brightness(50%);
+  transition: filter 0.1s ease;
+}
+
+.location img {
+  width: 32px;
+  height: 32px;
+  margin-bottom: -22px;
+}
+
+.logo {
+  width: 40px;
+  height: 30px;
+}
+
+.stick {
+  transform: rotate(90deg);
+  transform-origin: top left;
+  height: 1px;
+  width: 26px;
+  background-color: white;
+  margin-top: -3px;
+}
+
+.morenavbar {
+  width: 100%;
+  height: 40px;
+  position: fixed;
+  top: 65px;
+  left: 0;
+  align-items: center;
+  display: none;
+  justify-content: right;
+  justify-items: center;
+  background-color: white;
+  /*overflow: hidden*/
+}
+
+.morenavbar a {
+  width: auto;
+  height: auto;
+}
+
+.morenavbar ul {
+  top: 0%;
+  right: 0%;
+  display: flex;
+  gap: 10px;
+  margin-right: 380px;
+}
+
+.morenavbar ul li {
+  list-style: none;
+}
+
+.morenavbar ul li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+  font-family: Arial;
+  word-wrap: break-word;
+  width: 100%;
+  font-weight: 700;
+  margin-left: 0px;
+}
+.morenavbar ul li a:hover {
+  color: #a72c2c;
+  transition: all 0.1s ease-in-out;
+}
+
+.dropdown:hover .morenavbar {
+  display: block;
+}
+
+.dropdown:hover .overlay {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  margin-right: 0px;
+  opacity: 30%;
+}
+
+.dropdown1:hover .morenavbar {
+  display: block;
+}
+
+.dropdown1:hover .overlay {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  margin-right: 0px;
+  opacity: 30%;
+}
+.overlay {
+  margin-top: 105px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black; /* Tối màu */
+  opacity: 0;
+  pointer-events: none; /* Không cản trở các thành phần */
+  transition: opacity 0.1s ease;
+  z-index: 1;
+}
+/*.blurbackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    z-index: -1;
+    display: none;
+}*/
+
+/*Main*/
+.video-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main {
+  padding-top: 30px;
+  width: 1400px;
+  height: auto;
+  background-color: white;
+  margin: 0 auto;
+  top: 0;
+  text-align: center;
+}
+
+.stick2 {
+  transform: rotate(90deg);
+  transform-origin: top left;
+  height: 1px;
+  width: 12px;
+  background-color: black;
+  margin-top: 5px;
+  margin-left: 15px;
+}
+
+.text {
+  font-size: 24px;
+  font-family: Arial;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.text1 {
+  font-size: 13px;
+  font-family: Arial;
+  font-weight: 300;
+}
+
+.container {
+  /* Hoặc div chứa cả .motorlist và nút điều hướng */
+  position: relative; /* Để các nút điều hướng có thể định vị tuyệt đối so với nó */
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  justify-items: center;
+  margin-top: 50px;
+  /* Các thuộc tính khác của container */
+}
+
+.motorlist {
+  width: 90%; /* Hoặc giá trị cụ thể như 900px */
+  margin: 0 auto; /* Căn giữa */
+}
+
+.swiper-wrapper {
+  display: flex;
+  margin-left: 0px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  /* display: none !important; */
+  width: 30px;
+  height: 30px;
+  position: absolute; /* Định vị tuyệt đối so với .container */
+  top: 50%; /* Đặt ở giữa theo chiều dọc */
+  transform: translateY(10%); /* Căn giữa chính xác theo chiều dọc */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.swiper-button-prev::after {
+  content: none !important;
+}
+
+.swiper-button-next::after {
+  content: none !important;
+}
+
+.swiper-button-prev i {
+  color: black;
+  font-size: 40px;
+  margin-left: -11px;
+}
+
+.swiper-button-next i {
+  color: black;
+  font-size: 40px;
+  margin-right: -11px; /* Điều chỉnh vị trí bên phải */
+}
+
+.swiper-slide-duplicate {
+  opacity: 0.99; /* Tránh lỗi hiển thị */
+}
+
+.swiper-slide {
+  width: calc((100% - 40px) / 3) !important; /* Giữ nguyên 3 slide/lần */
+  transform: scale(0.9); /* Thu nhỏ slide */
+  transition: transform 0.3s ease;
+}
+
+.motorlist ul {
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.motorlist ul li {
+  list-style: none;
+}
+
+.hover {
+  display: inline-block;
+
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  overflow: visible;
+}
+
+.item {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.item img {
+  width: 70%;
+  height: 70%;
+  transition: transform 0.3s ease;
+}
+
+.hover:hover .item img {
+  transform: scale(1.05);
+}
+
+.name {
+  color: black;
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.hover:hover .name {
+  color: rgb(216, 49, 49);
+}
+
+.cost {
+  color: rgb(113, 112, 112);
+  font-size: 15px;
+  font-weight: 500;
+  padding-bottom: 5px;
+}
+
+.subscribe {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0;
+  text-decoration: none;
+  transition: opacity 0.3s ease, color 0.3s ease;
+  margin-top: 10px;
+}
+
+.hover:hover .subscribe {
+  opacity: 1;
+}
+
+.subscribe:hover {
+  color: rgb(216, 49, 49);
+}
+
+.mainchoice {
+  background-color: rgb(238, 237, 237);
+  width: 100%;
+  height: 30px;
+  margin-top: 40px;
+  align-items: center;
+  display: flex;
+  padding: 25px 0px 25px 0px;
+}
+
+.mainchoice .choice-list {
+  height: 27px;
+  width: 100%;
+}
+
+.mainchoice .list {
+  display: flex;
+  gap: 50px;
+  margin-top: 0;
+}
+
+.mainchoice .list li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.mainchoice .list li:hover .choice {
+  color: blue;
+}
+
+.choice-icon-change {
+  display: none;
+}
+
+.choice-icon {
+  margin-right: 10px;
+}
+
+.mainchoice .list li:hover .choice-icon {
+  display: none;
+}
+
+.mainchoice .list li:hover .choice-icon-change {
+  display: block;
+  margin-right: 10px;
+}
+
+.mainchoice .list li .choice {
+  align-items: center;
+  font-size: 17px;
+  text-decoration: none;
+  font-weight: 500;
+  font-family: League Spartan;
+  word-wrap: none;
+  color: black;
+  display: flex;
+}
+
+.inform {
+  margin-top: 30px;
+  width: 100%;
+  height: 3000px;
+  background-color: #636363;
+}
+
+.inform .inform-container {
+  width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+}
