@@ -8,9 +8,18 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-// Lắng nghe sự kiện click vào thẻ card
-document.querySelectorAll(".card").forEach((card) => {
+document.querySelectorAll(".card, .card2").forEach((card) => {
   card.addEventListener("click", function () {
-    this.classList.toggle("active"); // Thêm hoặc bỏ lớp 'active' khi click
+    // Đóng tất cả các card đang mở, trừ card đang được click
+    document
+      .querySelectorAll(".card.active, .card2.active")
+      .forEach((activeCard) => {
+        if (activeCard !== this) {
+          activeCard.classList.remove("active");
+        }
+      });
+
+    // Toggle card đang được click
+    this.classList.toggle("active");
   });
 });
