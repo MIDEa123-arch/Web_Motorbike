@@ -494,7 +494,7 @@ html {
 .inform {
   margin-top: 30px;
   width: 100%;
-  background: linear-gradient(to bottom, #3b3b3b, #acacab);
+  background: linear-gradient(to bottom, #3b3b3b, #707070);
 }
 
 .inform .inform-container {
@@ -831,20 +831,22 @@ html {
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 590px;
+  height: 540px;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 100px;
   position: relative;
   text-align: center;
   align-items: center;
   justify-items: center;
   z-index: 0;
+  justify-content: center;
+  padding-top: 50px;
 }
 
 .Subscribe-container span {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
-  font-size: 30px;
+  font-size: 25px;
   text-transform: uppercase;
   color: rgb(255, 255, 255);
   z-index: 2;
@@ -863,13 +865,233 @@ html {
   z-index: -1;
 }
 
-.input {
-  width: 900px;
-  margin-top: 30px;
-  border-spacing: 30px;
+.table {
+  width: 630px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: flex-start;
 }
 
-.input tr {
+.select-box {
+  width: 100%;
+  padding: 10px;
+  margin-top: 26px;
+}
+
+.input-box1 {
+  width: 405px;
+  padding: 10px;
+}
+
+.input-box2 {
+  margin-left: auto;
+  width: 150px;
+  padding: 5px;
+}
+
+.input-box {
+  width: 100%;
+  padding: 10px;
+}
+
+.table button {
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  color: black;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 20px;
+  border: 1px solid white;
+  color: black;
+}
+
+.table button:hover {
+  background-color: black;
+  color: white;
+}
+
+@media (max-width: 1000px) {
+  .input-box1,
+  .input-box2 {
+    width: 100%;
+  }
+}
+
+.footer {
+  background-color: rgba(255, 255, 255, 0.904);
+  width: 100%;
+  height: 400px;
+}
+
+.footer-table {
+  width: 100%;
+  padding-top: 65px;
+  margin-top: 0px;
+  border-spacing: 20px;
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.first-row {
+  width: 50%;
+}
+
+.first-row span {
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+.first-row1 {
+  width: 30%;
+  vertical-align: top;
+  padding-top: 10px;
+}
+
+.second-row {
+  width: 25%;
+}
+.motorbike-link {
+  color: black;
+  font-size: 15px;
+  font-weight: 400;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.motorbike-link:hover {
+  font-weight: 600;
+}
+
+.side-link {
+  color: black;
+  font-size: 15px;
+  font-weight: 300;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.side-link:hover {
+  font-weight: 600;
+}
+.choice-row {
+  margin-left: 20px;
+  background-color: black;
+  padding: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-size: 16px;
+  font-weight: 1000;
+}
+
+.choice-row img {
+  margin-bottom: -5px;
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+}
+
+.choice-row:hover {
+  background-color: blue;
+}
+
+.social-media {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.link a {
+  text-decoration: none;
+  font-weight: 300;
+  color: black;
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  min-width: 130px;
+}
+
+.link img {
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+}
+
+.arrow {
+  width: 15px;
+  height: 15px;
+  margin-left: 17px;
+}
+
+.link a:hover {
+  font-weight: 600;
+}
+
+.extra-footer {
   background-color: white;
-  height: 50px;
+  height: 200px;
+  width: 100%;
+  display: flex;
+  text-align: right;
+  position: relative;
+}
+
+.lang-box {
+  height: 16px;
+  margin-left: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  margin: 50px 0px 0px 20px;
+}
+.lang-box .img1 {
+  width: 18px;
+  height: 18px;
+}
+
+.lang-box span {
+  font-size: 17px;
+  color: rgb(141, 141, 141);
+}
+
+.lang-box .img2 {
+  width: 18px;
+  height: 18px;
+  display: none;
+}
+
+.lang-box:hover .img2 {
+  display: block;
+}
+
+.lang-box:hover .img1 {
+  display: none;
+}
+
+.lang-box:hover span {
+  color: blue;
+}
+
+.sologan {
+  font-size: 17px;
+  text-transform: uppercase;
+  font-weight: 1000;
+  align-items: right;
+}
+
+.highlight {
+  margin-top: 50px;
+  height: 20px;
+  border-bottom: 5px solid;
+  margin-left: auto;
+  margin-right: 30px;
+  text-align: right;
+  display: flex;
+  padding-right: 10px;
+  padding-bottom: 8px;
 }
