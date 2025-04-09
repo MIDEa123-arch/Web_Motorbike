@@ -1,9 +1,9 @@
 ﻿@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Roboto:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&family=League+Spartan:wght@100..900&family=Roboto:wght@100..900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Spartan:wght@100..900&family=Roboto:wght@900&display=swap");
 * {
-  font-family: "Roboto", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 body,
 html {
@@ -22,7 +22,7 @@ html {
   align-items: center;
   padding: 16px 0px 16px 25px;
   display: flex;
-  z-index: 1000; /* Đảm bảo navbar nằm trên các phần tử khác */
+  z-index: 1000;
 }
 
 .navbar a {
@@ -920,7 +920,8 @@ html {
 }
 
 .footer {
-  background-color: rgba(255, 255, 255, 0.904);
+  margin-top: 30px;
+  background-color: rgba(242, 242, 242, 0.904);
   width: 100%;
   height: 400px;
 }
