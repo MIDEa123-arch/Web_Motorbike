@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Spartan:wght@100..900&family=Roboto:wght@900&display=swap");
+
+* {
+  font-family: "Inter", sans-serif;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.top-background {
+  height: 90%;
+  width: 100%;
+  object-fit: cover;
+}
+.body {
+  width: 100%;
+  text-align: center;
+  padding-top: 40px;
+}
+.body p {
+  font-size: 12px;
+  margin-top: 3px;
+}
+.title {
+  font-family: "Inter", sans-serif;
+  font-size: 30px;
+  font-weight: 1000;
+  text-transform: uppercase;
+}
+
+.first-section {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+
+.choice-title {
+  width: 1470px;
+  text-align: left;
+  padding-left: 170px;
+  margin-top: 50px;
+}
+
+.choice-title span {
+  font-family: "Inter", sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.choice-title p {
+  font-family: "Inter", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 1000px) {
+  .choice-title span {
+    font-size: 40px;
+  }
+
+  .choice-title p {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .choice-title span {
+    font-size: 30px;
+  }
+
+  .choice-title p {
+    font-size: 10px;
+  }
+}
+
+.second-section {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  background: #f2f2f2;
+  margin-top: 20px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  background: #f2f2f2; /* hoặc màu nền nhẹ */
+}
+
+.menu ul {
+  display: flex;
+  gap: 80px;
+  list-style: none;
+  padding: 0;
+}
+
+.menu ul li {
+  position: relative;
+}
+
+.menu a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 400;
+  filter: brightness(50%);
+  color: #000000;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+
+.menu ul li a:hover {
+  font-weight: 900;
+}
+
+.menu ul li a::before {
+  content: attr(title);
+  display: block;
+  font-weight: 900;
+  overflow: hidden;
+  visibility: hidden;
+  height: 0;
+}
+
+.third-section {
+  width: 100%;
+  background-color: rgb(232, 230, 230);
+}
+
+.product {
+  width: 100%;
+  max-width: 1470px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.product-container {
+  display: flex;
+  justify-content: start;
+  width: 100%;
+  gap: 20px;
+  padding-bottom: 35px;
+  flex-wrap: wrap;
+}
+
+.pro {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+}
+
+.type {
+  margin-bottom: 15px;
+}
+
+.type span {
+  color: black;
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.product-container a {
+  background-color: white;
+  padding: 30px;
+
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  flex: 1 1 15.6%; /* Tự co giãn mượt */
+  box-sizing: border-box;
+  min-width: 230px; /* không nhỏ hơn */
+  max-width: 270px; /* không to quá */
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.product-container a div {
+  text-align: left;
+}
+
+.product-container a img {
+  width: 100%;
+  height: auto;
+}
+
+.product-container a div .name {
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-top: 30px;
+  width: 200px;
+}
+
+.pro-sologan {
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+.price {
+  font-size: 17px;
+  font-weight: 400;
+  margin-top: 20px;
+  margin-bottom: -10px;
+}
