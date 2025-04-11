@@ -8,7 +8,8 @@ html {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
+  scroll-behavior: smooth;
+  min-height: 100vh;
 }
 
 .top-background {
@@ -20,6 +21,7 @@ html {
   width: 100%;
   text-align: center;
   padding-top: 40px;
+  position: relative;
 }
 .body p {
   font-size: 12px;
@@ -94,38 +96,52 @@ html {
 }
 
 .menu ul {
+  flex-wrap: wrap;
   display: flex;
-  gap: 80px;
+  gap: 20px;
   list-style: none;
-  padding: 0;
+  padding: 0px 0px 0px 70px;
 }
 
 .menu ul li {
   position: relative;
+  flex: 0 0 auto;
 }
 
-.menu a {
+.menu button {
   display: inline-block;
   text-decoration: none;
   font-size: 21px;
   font-weight: 400;
   filter: brightness(50%);
   color: #000000;
-  font-family: "Roboto", sans-serif;
   text-align: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 70px;
 }
 
-.menu ul li a:hover {
-  font-weight: 900;
+.menu ul li button:hover {
+  font-weight: 850;
 }
 
-.menu ul li a::before {
+.menu ul li button::before {
   content: attr(title);
   display: block;
-  font-weight: 900;
+  font-weight: 850;
   overflow: hidden;
   visibility: hidden;
   height: 0;
+}
+
+button.active {
+  font-weight: 850;
+}
+
+button.active::before {
+  font-weight: 850;
 }
 
 .third-section {
@@ -136,7 +152,7 @@ html {
 .product {
   width: 100%;
   max-width: 1470px;
-  padding: 0 20px;
+  padding: 30px 20px;
   margin: 0 auto;
 }
 
@@ -153,7 +169,6 @@ html {
   text-align: left;
   margin: 0;
   padding: 0;
-
   width: 100%;
 }
 
@@ -163,18 +178,17 @@ html {
 
 .type span {
   color: black;
-  font-size: 34px;
+  font-size: 30px;
   font-weight: 800;
 }
 
 .product-container a {
   background-color: white;
   padding: 30px;
-
   text-decoration: none;
   color: black;
   text-align: center;
-  flex: 1 1 15.6%; /* Tự co giãn mượt */
+  flex: 1; /* Tự co giãn mượt */
   box-sizing: border-box;
   min-width: 230px; /* không nhỏ hơn */
   max-width: 270px; /* không to quá */
@@ -189,6 +203,11 @@ html {
 .product-container a img {
   width: 100%;
   height: auto;
+  transition: transform 0.3s ease;
+}
+
+.product a:hover img {
+  transform: scale(1.05);
 }
 
 .product-container a div .name {
