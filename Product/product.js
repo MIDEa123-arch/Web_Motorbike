@@ -33,6 +33,14 @@ const filterType = urlParams.get("filter");
 
 if (filterType) {
   filterSections(filterType);
-} else {
-  filterSections("All");
+
+  // Cập nhật nút active tương ứng
+  filterButtons.forEach((button) => {
+    const btnType = button.getAttribute("data-type");
+    if (btnType === filterType) {
+      button.classList.add("active");
+    } else {
+      button.classList.remove("active");
+    }
+  });
 }

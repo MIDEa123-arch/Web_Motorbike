@@ -8,18 +8,18 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-document.querySelectorAll(".card, .card2").forEach((card) => {
-  card.addEventListener("click", function () {
-    // Đóng tất cả các card đang mở, trừ card đang được click
-    document
-      .querySelectorAll(".card.active, .card2.active")
-      .forEach((activeCard) => {
-        if (activeCard !== this) {
-          activeCard.classList.remove("active");
-        }
-      });
+var cards = document.querySelectorAll(".card, .card2");
 
-    // Toggle card đang được click
+for (var i = 0; i < cards.length; i++) {
+  cards[i].addEventListener("click", function () {
+    var activeCards = document.querySelectorAll(".card.active, .card2.active");
+
+    for (var j = 0; j < activeCards.length; j++) {
+      if (activeCards[j] !== this) {
+        activeCards[j].classList.remove("active");
+      }
+    }
+
     this.classList.toggle("active");
   });
-});
+}

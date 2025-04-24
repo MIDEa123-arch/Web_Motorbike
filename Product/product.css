@@ -188,10 +188,10 @@ button.active::before {
   text-decoration: none;
   color: black;
   text-align: center;
-  flex: 1; /* Tự co giãn mượt */
+  flex: 2 1 15.6%;
   box-sizing: border-box;
-  min-width: 230px; /* không nhỏ hơn */
-  max-width: 270px; /* không to quá */
+  min-width: 230px;
+  max-width: 270px;
   transition: all 0.3s ease;
   overflow: hidden;
 }
