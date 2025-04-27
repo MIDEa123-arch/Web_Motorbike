@@ -1,5 +1,6 @@
 /* Import navbar and footer styles */
-@import url('../TrangChu/TrangChu.css');
+@import url("../TrangChu/TrangChu.css");
+@import url("../Product/product.css");
 
 /* Contact Container Styles */
 .contact-container {
@@ -17,6 +18,8 @@
   font-size: 36px;
   color: #333;
   margin-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: 800;
 }
 
 .contact-header p {
@@ -58,7 +61,7 @@
   padding: 30px;
   background: white;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   min-height: 120px;
 }
 
@@ -176,13 +179,13 @@ button[type="submit"]:hover {
   margin-bottom: 20px;
   background: white;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
 .info-item:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .info-item:last-child {
@@ -266,11 +269,11 @@ button[type="submit"]:hover {
   .contact-main {
     grid-template-columns: 1fr;
   }
-  
+
   .service-info {
     grid-template-columns: 1fr;
   }
-  
+
   .contact-info {
     height: auto;
   }
@@ -280,23 +283,756 @@ button[type="submit"]:hover {
   .contact-container {
     margin: 80px auto 40px;
   }
-  
+
   .contact-header h1 {
     font-size: 28px;
   }
-  
+
   .contact-header p {
     font-size: 16px;
   }
-  
+
   .customer-service,
   .contact-form,
   .contact-info,
   .about-us {
     padding: 30px;
   }
-  
+
   .service-info .info-item {
     padding: 20px;
   }
-} 
+}
+
+.custom-footer {
+  margin-top: 30px !important;
+  background-color: rgba(242, 242, 242, 0.904) !important;
+  width: 100% !important;
+  padding-top: 75px !important;
+}
+
+.custom-footer-table {
+  width: 100% !important;
+  padding-top: 65px !important;
+  margin-top: 0px !important;
+  border-spacing: 20px !important;
+  color: black !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.footer-first-row {
+  padding-left: 20px;
+  width: 50% !important;
+}
+
+.footer-first-row span {
+  margin-left: 20px !important;
+  font-size: 16px !important;
+}
+
+.footer-third-row {
+  padding-top: 15px;
+}
+.footer-first-row1 {
+  padding-left: 20px;
+  width: 30% !important;
+  vertical-align: top !important;
+  padding-top: 17px !important;
+}
+
+.footer-second-row {
+  padding-top: 15px;
+  width: 25% !important;
+}
+
+.footer-motorbike-link {
+  color: black !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  text-decoration: none !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.footer-motorbike-link:hover {
+  font-weight: 600 !important;
+}
+
+.footer-side-link {
+  color: black !important;
+  font-size: 15px !important;
+  font-weight: 300 !important;
+  text-decoration: none !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.footer-side-link:hover {
+  font-weight: 600 !important;
+}
+
+.footer-choice-row {
+  margin-left: 20px !important;
+  background-color: black !important;
+  padding: 20px !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+  color: white !important;
+  font-size: 16px !important;
+  font-weight: 1000 !important;
+}
+
+.footer-choice-row img {
+  margin-bottom: 4px !important;
+  width: 25px !important;
+  height: 25px !important;
+  margin-right: 5px !important;
+}
+
+.footer-choice-row:hover {
+  background-color: blue !important;
+}
+
+.footer-social-media {
+  margin-top: 33px;
+  margin-left: 10px;
+  list-style: none !important;
+  display: flex !important;
+  gap: 30px !important;
+}
+
+.footer-social-link a {
+  text-decoration: none !important;
+  font-weight: 300 !important;
+  color: black !important;
+  align-content: center !important;
+  justify-content: center !important;
+  display: flex !important;
+  min-width: 130px !important;
+}
+
+.footer-arrow {
+  width: 15px !important;
+  height: 15px !important;
+  margin-left: 17px !important;
+  margin-top: -7px;
+}
+
+.footer-social-link img {
+  width: 20px !important;
+  height: 20px !important;
+  margin-right: 15px !important;
+}
+
+.footer-social-link a:hover {
+  font-weight: 600 !important;
+}
+
+.footer-extra {
+  background-color: white !important;
+  height: 200px !important;
+  width: 100% !important;
+  display: flex !important;
+  text-align: right !important;
+  position: relative !important;
+}
+
+.footer-lang-box {
+  height: 16px !important;
+  margin-left: 0 !important;
+  cursor: pointer !important;
+  display: flex !important;
+  justify-content: center !important;
+  gap: 7px !important;
+  margin: 50px 0px 0px 20px !important;
+}
+
+.footer-lang-box .img1 {
+  width: 18px !important;
+  height: 18px !important;
+}
+
+.footer-lang-box span {
+  margin-top: -2px;
+  font-size: 17px !important;
+  color: rgb(141, 141, 141) !important;
+}
+
+.footer-lang-box .img2 {
+  width: 18px !important;
+  height: 18px !important;
+  display: none !important;
+}
+
+.footer-lang-box:hover .img2 {
+  display: block !important;
+}
+
+.footer-lang-box:hover .img1 {
+  display: none !important;
+}
+
+.footer-lang-box:hover span {
+  color: blue !important;
+}
+
+.footer-slogan {
+  font-size: 17px !important;
+  text-transform: uppercase !important;
+  font-weight: 1000 !important;
+  align-items: right !important;
+}
+
+.footer-highlight {
+  margin-top: 50px !important;
+  height: 20px !important;
+  border-bottom: 5px solid !important;
+  margin-left: auto !important;
+  margin-right: 30px !important;
+  text-align: right !important;
+  display: flex !important;
+  padding-right: 10px !important;
+  padding-bottom: 30px !important;
+}
+
+/*Navbar*/
+.my-navbar {
+  width: 100%;
+  position: fixed;
+  background-color: #272222;
+  top: 0;
+  left: 0;
+  align-items: center;
+  padding: 16px 0px 16px 25px;
+  display: flex;
+  z-index: 1000;
+  padding-bottom: 20px;
+}
+
+.my-navbar a {
+  width: auto;
+  height: auto;
+}
+
+.my-navbar ul {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  display: flex;
+  gap: 60px;
+  margin-right: 40px;
+}
+
+.my-navbar ul li {
+  position: relative;
+  list-style: none;
+  margin: 9px 0 0 0;
+}
+
+.my-navbar ul li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-family: Arial;
+  word-wrap: break-word;
+  width: 100%;
+  font-weight: 400;
+  padding-bottom: 27px;
+}
+
+.my-navbar ul li a:hover {
+  color: #636363;
+  transition: all 0.1s ease-in-out;
+}
+
+.my-navbar a:hover img {
+  filter: brightness(50%);
+  transition: filter 0.1s ease;
+}
+
+.my-location img {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 0px;
+}
+
+.my-logo {
+  width: 40px;
+  height: 30px;
+}
+
+.my-stick {
+  transform: rotate(90deg);
+  transform-origin: top left;
+  height: 1px;
+  width: 26px;
+  background-color: white;
+  margin-top: -3px;
+}
+
+.my-morenavbar {
+  width: 100%;
+  height: 40px;
+  position: fixed;
+  top: 65px;
+  left: 0;
+  align-items: center;
+  display: none;
+  justify-content: right;
+  justify-items: center;
+  background-color: white;
+  /*overflow: hidden*/
+}
+
+.my-morenavbar a {
+  width: auto;
+  height: auto;
+}
+
+.my-morenavbar ul {
+  right: 0%;
+  display: flex;
+  gap: 10px;
+  margin-right: 380px;
+  margin-top: -3px;
+}
+
+.my-morenavbar ul li {
+  list-style: none;
+}
+
+.my-morenavbar ul li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+  font-family: Arial;
+  word-wrap: break-word;
+  width: 100%;
+  font-weight: 700;
+  margin-left: 0px;
+}
+.my-morenavbar ul li a:hover {
+  color: #a72c2c;
+  transition: all 0.1s ease-in-out;
+}
+
+.my-dropdown:hover .my-morenavbar {
+  display: block;
+}
+
+.my-dropdown:hover .my-overlay {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  margin-right: 0px;
+  opacity: 30%;
+}
+
+.my-dropdown1:hover .my-morenavbar {
+  display: block;
+}
+
+.my-dropdown1:hover .my-overlay {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  margin-right: 0px;
+  opacity: 30%;
+}
+.my-overlay {
+  margin-top: 105px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.1s ease;
+  z-index: 1;
+}
+
+/*Navbar*/
+.my-navbar {
+  width: 100%;
+  position: fixed;
+  background-color: #272222;
+  top: 0;
+  left: 0;
+  align-items: center;
+  padding: 16px 0px 16px 25px;
+  display: flex;
+  z-index: 1000;
+  padding-bottom: 20px;
+}
+
+.my-navbar a {
+  width: auto;
+  height: auto;
+}
+
+.my-navbar ul {
+  position: absolute;
+  top: 13px;
+  right: -25px;
+  display: flex;
+  gap: 60px;
+  margin-right: 40px;
+}
+
+.my-navbar ul li {
+  position: relative;
+  list-style: none;
+  margin: 9px 0 0 0;
+}
+
+.my-navbar ul li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-family: Arial;
+  word-wrap: break-word;
+  width: 100%;
+  font-weight: 400;
+  padding-bottom: 27px;
+}
+
+.my-navbar ul li a:hover {
+  color: #636363;
+  transition: all 0.1s ease-in-out;
+}
+
+.my-navbar a:hover img {
+  filter: brightness(50%);
+  transition: filter 0.1s ease;
+}
+
+.my-location img {
+  width: 32px;
+  height: 32px;
+  margin-bottom: -22px;
+}
+
+.my-logo {
+  width: 40px;
+  height: 30px;
+}
+
+.my-stick {
+  transform: rotate(90deg);
+  transform-origin: top left;
+  height: 1px;
+  width: 26px;
+  background-color: white;
+  margin-top: 0px;
+}
+
+.my-morenavbar {
+  width: 100%;
+  height: 40px;
+  position: fixed;
+  top: 65px;
+  left: 0;
+  align-items: center;
+  display: none;
+  justify-content: right;
+  justify-items: center;
+  background-color: white;
+}
+
+.my-morenavbar a {
+  width: auto;
+  height: auto;
+}
+
+.my-morenavbar ul {
+  top: 0%;
+  right: 0%;
+  display: flex;
+  gap: 10px;
+  margin-right: 380px;
+}
+
+.my-morenavbar ul li {
+  list-style: none;
+}
+
+.my-morenavbar ul li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+  font-family: Arial;
+  word-wrap: break-word;
+  width: 100%;
+  font-weight: 700;
+  margin-left: 0px;
+}
+
+.my-morenavbar ul li a:hover {
+  color: #a72c2c;
+  transition: all 0.1s ease-in-out;
+}
+
+.my-dropdown:hover .my-morenavbar {
+  display: block;
+}
+
+.my-dropdown:hover .my-overlay {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  margin-right: 0px;
+  opacity: 30%;
+}
+
+.my-dropdown1:hover .my-morenavbar {
+  display: block;
+}
+
+.my-dropdown1:hover .my-overlay {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  margin-right: 0px;
+  opacity: 30%;
+}
+
+.my-overlay {
+  margin-top: 105px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.1s ease;
+  z-index: 1;
+}
+
+.my-stick2 {
+  transform: rotate(90deg);
+  transform-origin: top left;
+  height: 1px;
+  width: 12px;
+  background-color: black;
+  margin-top: 7px;
+  margin-left: 15px;
+}
+
+/* He thong phan phoi */
+/* Crossbar */
+.crossbar {
+  width: 30%;
+  border: 1.5px solid black;
+  height: 0;
+}
+
+/* Icon */
+.icon {
+  width: 4%;
+  margin-top: -30px;
+}
+
+/* Container & Nội dung */
+.distribute-content {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+.distribute-container {
+  padding: 0px;
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.address {
+  background-color: black;
+  color: white;
+  padding: 10px 10px 10px 40px;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 60px auto 5px;
+  width: 100%;
+  max-width: 680px;
+}
+
+/* Chi nhánh */
+.col-brand1 {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 30px 42px 30px 42px;
+}
+
+.brief-inform {
+  padding-bottom: 30px;
+}
+
+.active-button {
+  margin-left: -2px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: start;
+  width: 100%;
+  cursor: pointer;
+}
+
+.active-button img {
+  margin-top: 6px;
+  width: 16px;
+  float: right;
+}
+
+.detail-add {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #333;
+}
+
+.inform-title {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.business-button,
+.service-button {
+  font-size: 13px;
+  cursor: pointer;
+  display: inline-block;
+}
+.business-button::before,
+.service-button::before {
+  content: attr(title);
+  display: block;
+  font-weight: 850;
+  overflow: hidden;
+  visibility: hidden;
+  height: 0;
+}
+.business-button:hover,
+.service-button:hover {
+  font-weight: 800;
+}
+
+.active-title {
+  border: none;
+  background-color: #eaeaea;
+}
+.active-title img {
+  margin-right: 6px;
+  width: 16px;
+}
+
+/* Thông tin liên hệ */
+.detail-text,
+.detail-time {
+  font-size: 18px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 5px 0;
+}
+
+.contact-detail a {
+  color: black;
+  text-decoration: none;
+  font-size: 15px;
+  display: inline-block;
+  margin: 5px 0;
+}
+
+.contact-icon,
+.contact-icon-hover {
+  width: 16px;
+  margin-right: 10px;
+  margin-top: -2px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.contact-icon-hover {
+  display: none;
+}
+
+.phone-num:hover .contact-icon-hover,
+.email:hover .contact-icon-hover {
+  display: inline-block;
+}
+.phone-num:hover .contact-icon,
+.email:hover .contact-icon {
+  display: none;
+}
+
+/* Ghi chú */
+.note {
+  font-size: 12px;
+  color: gray;
+  margin-top: 14px;
+}
+
+/* Nút bấm */
+.subscribe-button,
+.address-button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  border-radius: 0px;
+  border: 0px;
+}
+
+.subscribe-button {
+  padding: 11px 30px;
+  background-color: #000000;
+  color: white;
+}
+
+.address-button {
+  margin-top: 18px;
+  border: 2px solid #000000;
+  color: #000000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .inform-title {
+    flex-direction: column;
+  }
+  .distribute-container,
+  .address {
+    width: 95%;
+  }
+  .detail-text,
+  .detail-time {
+    font-size: 14px;
+  }
+  .contact-detail a {
+    font-size: 16px;
+  }
+}
+.detail-information {
+  margin-top: -30px;
+  display: none;
+}
+.arrow-icon {
+  transition: transform 0.3s ease; /* Xoay mượt */
+}
+.rotate-up {
+  transform: rotate(180deg);
+}
+.rotate-down {
+  transform: rotate(0deg);
+}
