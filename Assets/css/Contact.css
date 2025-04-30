@@ -1,6 +1,6 @@
 /* Import navbar and footer styles */
-@import url("../TrangChu/TrangChu.css");
-@import url("../Product/product.css");
+@import url("TrangChu.css");
+@import url("product.css");
 
 /* Contact Container Styles */
 .contact-container {
