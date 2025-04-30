@@ -230,21 +230,28 @@ document.addEventListener("DOMContentLoaded", function () {
       if (bServiceContent) bServiceContent.style.display = "none";
     }
 
-    // Sự kiện click mở/thu chi nhánh
     briefInform.addEventListener("click", function (e) {
-      if (e.target.closest(".active-button")) {
-        if (expandedBranch && expandedBranch !== branch) {
-          collapseBranch(expandedBranch);
-        }
+      const activeBtn = e.target.closest(".active-button");
+      if (activeBtn) {
+        const mapUrl = activeBtn.dataset.map;
 
+        // Nếu đang mở và nhấn để đóng
         if (expandedBranch === branch) {
-          // Nếu bấm lại chi nhánh đang mở -> thu lại
           collapseBranch(branch);
           expandedBranch = null;
+          changeMap(defaultMapUrl); // Quay về bản đồ mặc định
         } else {
-          // Mở chi nhánh mới
+          // Đóng chi nhánh khác nếu có
+          if (expandedBranch && expandedBranch !== branch) {
+            collapseBranch(expandedBranch);
+          }
+
           expandBranch(branch);
           expandedBranch = branch;
+
+          if (mapUrl) {
+            changeMap(mapUrl); // Đổi sang bản đồ của chi nhánh
+          }
         }
       }
     });
@@ -275,6 +282,100 @@ document.addEventListener("DOMContentLoaded", function () {
           if (serviceButton) serviceButton.style.fontWeight = "800";
           if (businessContent) businessContent.style.display = "none";
           if (serviceContent) serviceContent.style.display = "flex";
+        }
+      });
+    });
+  });
+});
+// URL mặc định của bản đồ
+const defaultMapUrl =
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.0418219923646!2d106.6260907!3d10.8061539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752be27d8b4f4d%3A0x92dcba2950430867!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBUaHXDom4gVFAuIEjhu5MgQ2jDrSBNaW5oIChIVUlUKQ!5e0!3m2!1sen!2s!4v1714463241234!5m2!1sen!2s";
+
+// Hàm thay đổi URL iframe
+function changeMap(url) {
+  document.getElementById("mapFrame").src = url;
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const branches = document.querySelectorAll(".col-brand1");
+  let expandedBranch = null; // Chi nhánh đang mở hiện tại
+
+  branches.forEach((branch) => {
+    const briefInform = branch.querySelector(".brief-inform");
+    const detailInformation = branch.querySelector(".detail-information");
+    const arrowIcon = branch.querySelector(".arrow-icon");
+    const filterButtons = branch.querySelectorAll(".inform-title button");
+
+    // Trạng thái ban đầu
+    detailInformation.style.display = "none";
+    if (arrowIcon) arrowIcon.classList.add("rotate-down");
+    branch.style.backgroundColor = "white";
+
+    // Hàm thu gọn chi nhánh
+    function collapseBranch(b) {
+      const bDetailInformation = b.querySelector(".detail-information");
+      const bArrowIcon = b.querySelector(".arrow-icon");
+
+      bDetailInformation.style.display = "none";
+      if (bArrowIcon) {
+        bArrowIcon.classList.remove("rotate-up");
+        bArrowIcon.classList.add("rotate-down");
+      }
+      b.style.backgroundColor = "white";
+    }
+
+    // Hàm mở rộng chi nhánh
+    function expandBranch(b) {
+      const bDetailInformation = b.querySelector(".detail-information");
+      const bArrowIcon = b.querySelector(".arrow-icon");
+
+      bDetailInformation.style.display = "block";
+      if (bArrowIcon) {
+        bArrowIcon.classList.remove("rotate-down");
+        bArrowIcon.classList.add("rotate-up");
+      }
+      b.style.backgroundColor = "#eaeaea";
+    }
+
+    // Sự kiện click mở/thu chi nhánh
+    briefInform.addEventListener("click", function (e) {
+      const activeBtn = e.target.closest(".active-button");
+      if (activeBtn) {
+        const mapUrl = activeBtn.dataset.map;
+
+        if (expandedBranch === branch) {
+          collapseBranch(branch);
+          expandedBranch = null;
+          changeMap(defaultMapUrl); // Quay về bản đồ mặc định
+        } else {
+          // Đóng chi nhánh khác nếu có
+          if (expandedBranch && expandedBranch !== branch) {
+            collapseBranch(expandedBranch);
+          }
+
+          expandBranch(branch);
+          expandedBranch = branch;
+
+          if (mapUrl) {
+            changeMap(mapUrl); // Đổi sang bản đồ của chi nhánh
+          }
+        }
+      }
+    });
+
+    // Sự kiện chuyển tab Kinh doanh/Dịch vụ (nếu có)
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetName = this.dataset.name;
+
+        // Đảm bảo chi nhánh đã mở
+        if (detailInformation.style.display === "none") {
+          if (expandedBranch && expandedBranch !== branch) {
+            collapseBranch(expandedBranch);
+          }
+          expandBranch(branch);
+          expandedBranch = branch;
         }
       });
     });

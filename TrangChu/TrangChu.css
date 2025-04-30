@@ -808,22 +808,13 @@ html {
   width: 100%;
   padding: 10px;
   margin-top: 26px;
-}
-
-.input-box1 {
-  width: 405px;
-  padding: 10px;
-}
-
-.input-box2 {
-  margin-left: auto;
-  width: 150px;
-  padding: 5px;
+  border: 2px solid black;
 }
 
 .input-box {
   width: 100%;
   padding: 10px;
+  border: 2px solid black;
 }
 
 .table button {
