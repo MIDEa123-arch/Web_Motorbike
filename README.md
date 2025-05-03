@@ -1,1 +1,1 @@
-Làm xong bỏ 3 file vào một folder rồi push lên nha
+File html thì bỏ ở ngoài, css, js thì bỏ trong Assets á nha
