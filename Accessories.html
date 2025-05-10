@@ -12,6 +12,10 @@
     <title>Accessories</title>
   </head>
   <body>
+    <a href="#" class="cart-icon" style="z-index: 1000">
+      <img src="Assets/Motorbikes/shopping-cart1.png" alt="Giỏ hàng" />
+      <span class="cart-count">0</span>
+    </a>
     <!-- Navbar -->
     <div class="my-navbar">
       <a href="#">
@@ -85,9 +89,12 @@
               />
             </a>
           </li>
-          <li style="margin-top: -1px; margin-left: -45px">
+          <li style="margin-top: -1px; margin-left: -30px; margin-right: 10px">
             <a class="my-location" href="#">
-              <img src="Assets/Motorbikes/More vertical.svg" />
+              <img
+                style="width: 28px; height: 28px"
+                src="Assets/Motorbikes/user.png"
+              />
             </a>
           </li>
         </ul>
@@ -184,20 +191,240 @@
 
           <div class="w-100 p-0 m-0">
             <div class="filter-btn w-100">
-              <div class="btn w-100 text-start ps-4" data-type="All">
+              <btn class="btn w-100 text-start ps-4" data-type="All">
                 Tất cả phụ kiện
-              </div>
+              </btn>
             </div>
 
-            <div class="filter-btn w-100">
-              <div class="btn w-100 text-start ps-4" data-type="Xe">
-                Phụ kiện cho xe
+            <div id="accordionFilter" class="accordion w-100 p-0 m-0">
+              <!-- PHỤ KIỆN CHO XE -->
+              <div class="filter-btn w-100 accordion-header" id="headingXe">
+                <button
+                  class="btn w-100 text-start ps-4 dropdown collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseXe"
+                  aria-expanded="false"
+                  aria-controls="collapseXe"
+                  data-type="Xe"
+                >
+                  Phụ kiện cho xe
+                </button>
               </div>
-            </div>
+              <div
+                id="collapseXe"
+                class="accordion-collapse collapse w-100 p-0 m-0"
+                aria-labelledby="headingXe"
+                data-bs-parent="#accordionFilter"
+              >
+                <div class="accordion-body w-100 p-0">
+                  <div class="form-check w-100 m-0 drop-type">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value="MODERN"
+                      id="modernXe"
+                    />
+                    <label class="form-check-label" for="modernXe">M</label>
+                  </div>
+                  <div class="form-check drop-type">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value="HERITAGE"
+                      id="heritageXe"
+                    />
+                    <label class="form-check-label" for="heritageXe"
+                      >Heritage</label
+                    >
+                  </div>
+                  <div class="form-check drop-type">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value="ROADSTER"
+                      id="roadstertXe"
+                    />
+                    <label class="form-check-label" for="roadstertXe"
+                      >Roadster</label
+                    >
+                  </div>
+                  <div class="form-check drop-type">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value="SPORT"
+                      id="sportXe"
+                    />
+                    <label class="form-check-label" for="sportXe">Sport</label>
+                  </div>
+                  <div class="form-check drop-type">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value="TOUR"
+                      id="tourXe"
+                    />
+                    <label class="form-check-label" for="tourXe">Tour</label>
+                  </div>
 
-            <div class="filter-btn w-100">
-              <div class="btn w-100 text-start ps-4" data-type="Nguoi">
-                Phụ kiện cho người
+                  <div class="form-check drop-type">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value="URBAN"
+                      id="urbanXe"
+                    />
+                    <label class="form-check-label" for="urbanXe"
+                      >Urban Mobility</label
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- PHỤ KIỆN CHO NGƯỜI -->
+              <div class="filter-btn w-100 accordion-header" id="headingNguoi">
+                <button
+                  class="btn w-100 text-start ps-4 dropdown collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseNguoi"
+                  aria-expanded="false"
+                  aria-controls="collapseNguoi"
+                  data-type="Nguoi"
+                >
+                  Phụ kiện cho người
+                </button>
+              </div>
+              <div
+                id="collapseNguoi"
+                class="accordion-collapse collapse w-100 p-0 m-0"
+                aria-labelledby="headingNguoi"
+                data-bs-parent="#accordionFilter"
+              >
+                <div class="accordion-body w-100 p-0">
+                  <div class="form-check w-100 m-0 drop-type">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value="AO"
+                      id="aoNguoi"
+                    />
+                    <label class="form-check-label" for="aoNguoi">Áo</label>
+                  </div>
+
+                  <div class="form-check w-100 m-0 drop-type">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value="QUAN"
+                      id="quanNguoi"
+                    />
+                    <label class="form-check-label" for="quanNguoi">Quần</label>
+                  </div>
+
+                  <div class="form-check w-100 m-0 drop-type">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value="BOOT"
+                      id="bootNguoi"
+                    />
+                    <label class="form-check-label" for="bootNguoi">Boot</label>
+                  </div>
+
+                  <div class="form-check w-100 m-0 drop-type">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value="GANG_TAY"
+                      id="gangtayNguoi"
+                    />
+                    <label class="form-check-label" for="gangtayNguoi"
+                      >Găng tay</label
+                    >
+                  </div>
+
+                  <div class="form-check w-100 m-0 drop-type">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value="TUI"
+                      id="tuiNguoi"
+                    />
+                    <label class="form-check-label" for="tuiNguoi">Túi</label>
+                  </div>
+
+                  <div class="form-check w-100 m-0 drop-type">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value="MU"
+                      id="muNguoi"
+                    />
+                    <label class="form-check-label" for="muNguoi">Mũ</label>
+                  </div>
+
+                  <div class="form-check w-100 m-0 drop-type">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value="KINH_MAT"
+                      id="kinhmatNguoi"
+                    />
+                    <label class="form-check-label" for="kinhmatNguoi"
+                      >Kính mắt</label
+                    >
+                  </div>
+
+                  <div class="form-check w-100 m-0 drop-type">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value="GIAP_BAO_VE"
+                      id="giapbaoveNguoi"
+                    />
+                    <label class="form-check-label" for="giapbaoveNguoi"
+                      >Giáp bảo vệ</label
+                    >
+                  </div>
+
+                  <div class="form-check w-100 m-0 drop-type">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value="DONG_HO"
+                      id="donghoNguoi"
+                    />
+                    <label class="form-check-label" for="donghoNguoi"
+                      >Đồng hồ</label
+                    >
+                  </div>
+
+                  <div class="form-check w-100 m-0 drop-type">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value="TRANG_PHUC_DI_MUA"
+                      id="muanguoi"
+                    />
+                    <label class="form-check-label" for="muanguoi"
+                      >Trang phục đi mưa</label
+                    >
+                  </div>
+
+                  <div class="form-check w-100 m-0 drop-type">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value="PHU_KIEN_KHAC"
+                      id="pkkhacNguoi"
+                    />
+                    <label class="form-check-label" for="pkkhacNguoi"
+                      >Phụ kiện khác</label
+                    >
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -214,134 +441,504 @@
           </form>
 
           <!-- Danh sách sản phẩm -->
-          <div class="row g-4">
+          <div class="row g-5">
             <div class="col-md-3" data-type="Xe">
-              <div class="card h-100 shadow-sm">
-                <img src="..." class="card-img-top" alt="..." />
+              <div class="card h-100 shadow-sm p-2">
+                <a href="#" class="mx-auto d-flex justify-content-center">
+                  <img
+                    src="Assets\Motorbikes\gbhga1.jpg"
+                    class="card-img-top product-detail"
+                    alt="..."
+                  />
+                </a>
                 <div class="card-body">
-                  <h5 class="card-title">Phụ kiện xe 1</h5>
-                  <p class="card-text">Mô tả sản phẩm nhanh gọn.</p>
-                  <a href="#" class="btn btn-sm btn-primary">Xem chi tiết</a>
-                </div>
-              </div>
-            </div>
+                  <a
+                    href="#"
+                    class="card-title text-danger fw-bold fs-5 text-decoration-none"
+                  >
+                    Bộ Túi Bên Hông
+                  </a>
 
-            <div class="col-md-3" data-type="Nguoi">
-              <div class="card h-100 shadow-sm">
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Phụ kiện người 1</h5>
-                  <p class="card-text">Mô tả sản phẩm nhanh gọn.</p>
-                  <a href="#" class="btn btn-sm btn-primary">Xem chi tiết</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-3" data-type="Nguoi">
-              <div class="card h-100 shadow-sm">
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Phụ kiện người 1</h5>
-                  <p class="card-text">Mô tả sản phẩm nhanh gọn.</p>
-                  <a href="#" class="btn btn-sm btn-primary">Xem chi tiết</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-3" data-type="Nguoi">
-              <div class="card h-100 shadow-sm">
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Phụ kiện người 1</h5>
-                  <p class="card-text">Mô tả sản phẩm nhanh gọn.</p>
-                  <a href="#" class="btn btn-sm btn-primary">Xem chi tiết</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-3" data-type="Nguoi">
-              <div class="card h-100 shadow-sm">
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Phụ kiện người 1</h5>
-                  <p class="card-text">Mô tả sản phẩm nhanh gọn.</p>
-                  <a href="#" class="btn btn-sm btn-primary">Xem chi tiết</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-3" data-type="Nguoi">
-              <div class="card h-100 shadow-sm">
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Phụ kiện người 1</h5>
-                  <p class="card-text">Mô tả sản phẩm nhanh gọn.</p>
-                  <a href="#" class="btn btn-sm btn-primary">Xem chi tiết</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-3" data-type="Nguoi">
-              <div class="card h-100 shadow-sm">
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Phụ kiện người 1</h5>
-                  <p class="card-text">Mô tả sản phẩm nhanh gọn.</p>
-                  <a href="#" class="btn btn-sm btn-primary">Xem chi tiết</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-3" data-type="Nguoi">
-              <div class="card h-100 shadow-sm">
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Phụ kiện người 1</h5>
-                  <p class="card-text">Mô tả sản phẩm nhanh gọn.</p>
-                  <a href="#" class="btn btn-sm btn-primary">Xem chi tiết</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-3" data-type="Nguoi">
-              <div class="card h-100 shadow-sm">
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Phụ kiện người 1</h5>
-                  <p class="card-text">Mô tả sản phẩm nhanh gọn.</p>
-                  <a href="#" class="btn btn-sm btn-primary">Xem chi tiết</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3" data-type="Nguoi">
-              <div class="card h-100 shadow-sm">
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Phụ kiện người 1</h5>
-                  <p class="card-text">Mô tả sản phẩm nhanh gọn.</p>
-                  <a href="#" class="btn btn-sm btn-primary">Xem chi tiết</a>
+                  <p
+                    class="card-text text-secondary mt-2"
+                    style="font-size: 13px"
+                  >
+                    Bộ túi bên hông là một phụ kiện tiện lợi, giúp tăng không
+                    gian lưu trữ khi di chuyển...
+                  </p>
+                  <p>
+                    <span class="text-dark fs-5 fw-bold"> 1.000.000đ</span>
+                    <span
+                      class="text-secondary fw-normal text-decoration-line-through ms-2"
+                      style="font-size: 15px"
+                      >1.551.000đ</span
+                    >
+                  </p>
+                  <div class="d-flex w-100 p-0 m-0">
+                    <button class="btn w-auto">
+                      <img src="Assets\Motorbikes\shopping-cart.png" />
+                      <span class="text-uppercase">Thêm vào giỏ hàng</span>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
 
             <div class="col-md-3" data-type="Xe">
-              <div class="card h-100 shadow-sm">
-                <img src="..." class="card-img-top" alt="..." />
+              <div class="card h-100 shadow-sm p-2">
+                <a href="#" class="mx-auto d-flex justify-content-center">
+                  <img
+                    src="Assets\Motorbikes\izqcyr.jpg"
+                    class="card-img-top product-detail"
+                    alt="..."
+                  />
+                </a>
                 <div class="card-body">
-                  <h5 class="card-title">Phụ kiện xe 2</h5>
-                  <p class="card-text">Mô tả sản phẩm nhanh gọn.</p>
-                  <a href="#" class="btn btn-sm btn-primary">Xem chi tiết</a>
+                  <a
+                    href="#"
+                    class="card-title text-danger fw-bold fs-5 text-decoration-none"
+                  >
+                    Bảo Vệ Phuộc
+                  </a>
+
+                  <p
+                    class="card-text text-secondary mt-2"
+                    style="font-size: 13px"
+                  >
+                    Một bộ bảo vệ phuộc CNC, có các miếng đệm nhôm anot với các
+                    chi tiết được khắc bằng laser...
+                  </p>
+                  <p>
+                    <span class="text-dark fs-5 fw-bold"> 350.000đ</span>
+                    <span
+                      class="text-secondary fw-normal text-decoration-line-through ms-2"
+                      style="font-size: 15px"
+                    ></span>
+                  </p>
+                  <div class="d-flex w-100 p-0 m-0">
+                    <button class="btn w-auto">
+                      <img src="Assets\Motorbikes\shopping-cart.png" />
+                      <span class="text-uppercase">Thêm vào giỏ hàng</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3" data-type="Xe">
+              <div class="card h-100 shadow-sm p-2">
+                <a href="#" class="mx-auto d-flex justify-content-center">
+                  <img
+                    src="Assets\Motorbikes\qd2o21.jpg"
+                    class="card-img-top product-detail"
+                    alt="..."
+                  />
+                </a>
+                <div class="card-body">
+                  <a
+                    href="#"
+                    class="card-title text-danger fw-bold fs-5 text-decoration-none"
+                  >
+                    Bảo Vệ Phuộc Trước
+                  </a>
+
+                  <p
+                    class="card-text text-secondary mt-2"
+                    style="font-size: 13px"
+                  >
+                    Giải pháp bảo vệ phuộc trước cho xe Yamaha, giúp tăng cường
+                    độ bền và hiệu suất hoạt động...
+                  </p>
+                  <p>
+                    <span class="text-dark fs-5 fw-bold"> 350.000đ</span>
+                    <span
+                      class="text-secondary fw-normal text-decoration-line-through ms-2"
+                      style="font-size: 15px"
+                    ></span>
+                  </p>
+                  <div class="d-flex w-100 p-0 m-0">
+                    <button class="btn w-auto">
+                      <img src="Assets\Motorbikes\shopping-cart.png" />
+                      <span class="text-uppercase">Thêm vào giỏ hàng</span>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
 
             <div class="col-md-3" data-type="Nguoi">
-              <div class="card h-100 shadow-sm">
-                <img src="..." class="card-img-top" alt="..." />
+              <div class="card h-100 shadow-sm p-2">
+                <a href="#" class="mx-auto d-flex justify-content-center">
+                  <img
+                    src="Assets\Motorbikes\dbntns.jpg"
+                    class="card-img-top product-detail"
+                    alt="..."
+                  />
+                </a>
                 <div class="card-body">
-                  <h5 class="card-title">Phụ kiện người 2</h5>
-                  <p class="card-text">Mô tả sản phẩm nhanh gọn.</p>
-                  <a href="#" class="btn btn-sm btn-primary">Xem chi tiết</a>
+                  <a
+                    href="#"
+                    class="card-title text-danger fw-bold fs-5 text-decoration-none"
+                  >
+                    Áo mưa
+                  </a>
+
+                  <p
+                    class="card-text text-secondary mt-2"
+                    style="font-size: 13px"
+                  >
+                    Đường may kín có dán băng keo chống thấm nước Cổ tay co dãn
+                    và eo đai cao su Có thể gấp gọn...
+                  </p>
+                  <p>
+                    <span class="text-dark fs-5 fw-bold"> 1.350.000đ</span>
+                    <span
+                      class="text-secondary fw-normal text-decoration-line-through ms-2"
+                      style="font-size: 15px"
+                      >1.850.000đ</span
+                    >
+                  </p>
+                  <div class="d-flex w-100 p-0 m-0">
+                    <button class="btn w-auto">
+                      <img src="Assets\Motorbikes\shopping-cart.png" />
+                      <span class="text-uppercase">Thêm vào giỏ hàng</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3" data-type="Nguoi">
+              <div class="card h-100 shadow-sm p-2">
+                <a href="#" class="mx-auto d-flex justify-content-center">
+                  <img
+                    src="Assets\Motorbikes\auds3r.jpg"
+                    class="card-img-top product-detail"
+                    alt="..."
+                  />
+                </a>
+                <div class="card-body">
+                  <a
+                    href="#"
+                    class="card-title text-danger fw-bold fs-5 text-decoration-none"
+                  >
+                    Áo Triumph Team Pit
+                  </a>
+
+                  <p
+                    class="card-text text-secondary mt-2"
+                    style="font-size: 13px"
+                  >
+                    Áo thun Triumph Team Pit 100% cotton với nhiều hình in màu
+                    sắc tương phản...
+                  </p>
+                  <p>
+                    <span class="text-dark fs-5 fw-bold"> 2.890.000đ</span>
+                    <span
+                      class="text-secondary fw-normal text-decoration-line-through ms-2"
+                      style="font-size: 15px"
+                      >3.200.000đ</span
+                    >
+                  </p>
+                  <div class="d-flex w-100 p-0 m-0">
+                    <button class="btn w-auto">
+                      <img src="Assets\Motorbikes\shopping-cart.png" />
+                      <span class="text-uppercase">Thêm vào giỏ hàng</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3" data-type="Nguoi">
+              <div class="card h-100 shadow-sm p-2">
+                <a href="#" class="mx-auto d-flex justify-content-center">
+                  <img
+                    src="Assets\Motorbikes\kwy5g1.jpg"
+                    class="card-img-top product-detail"
+                    alt="..."
+                  />
+                </a>
+                <div class="card-body">
+                  <a
+                    href="#"
+                    class="card-title text-danger fw-bold fs-5 text-decoration-none"
+                  >
+                    Túi đeo hông Triumph
+                  </a>
+
+                  <p
+                    class="card-text text-secondary mt-2"
+                    style="font-size: 13px"
+                  >
+                    KÍCH CỠ: 34 x 17 x 8cm VẢI CAO CẤP - 1000D Polyester/ PVC -
+                    Ngăn chính - Túi phụ...
+                  </p>
+                  <p>
+                    <span class="text-dark fs-5 fw-bold"> 2.380.000đ</span>
+                    <span
+                      class="text-secondary fw-normal text-decoration-line-through ms-2"
+                      style="font-size: 15px"
+                      >2.900.000đ</span
+                    >
+                  </p>
+                  <div class="d-flex w-100 p-0 m-0">
+                    <button class="btn w-auto">
+                      <img src="Assets\Motorbikes\shopping-cart.png" />
+                      <span class="text-uppercase">Thêm vào giỏ hàng</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3" data-type="Xe">
+              <div class="card h-100 shadow-sm p-2">
+                <a href="#" class="mx-auto d-flex justify-content-center">
+                  <img
+                    src="Assets\Motorbikes\lmnj2l.jpg"
+                    class="card-img-top product-detail"
+                    alt="..."
+                  />
+                </a>
+                <div class="card-body">
+                  <a
+                    href="#"
+                    class="card-title text-danger fw-bold fs-5 text-decoration-none"
+                  >
+                    Yên Sọc Ngang Màu Nâu
+                  </a>
+
+                  <p
+                    class="card-text text-secondary mt-2"
+                    style="font-size: 13px"
+                  >
+                    Là một phụ kiện dành cho xe máy, mang lại phong cách cổ điển
+                    và sang trọng...
+                  </p>
+                  <p>
+                    <span class="text-dark fs-5 fw-bold"> 4.350.000đ</span>
+                    <span
+                      class="text-secondary fw-normal text-decoration-line-through ms-2"
+                      style="font-size: 15px"
+                      >5.000.000đ</span
+                    >
+                  </p>
+                  <div class="d-flex w-100 p-0 m-0">
+                    <button class="btn w-auto">
+                      <img src="Assets\Motorbikes\shopping-cart.png" />
+                      <span class="text-uppercase">Thêm vào giỏ hàng</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3" data-type="Xe">
+              <div class="card h-100 shadow-sm p-2">
+                <a href="#" class="mx-auto d-flex justify-content-center">
+                  <img
+                    src="Assets\Motorbikes\1ftuhs.jpg"
+                    class="card-img-top product-detail"
+                    alt="..."
+                  />
+                </a>
+                <div class="card-body">
+                  <a
+                    href="#"
+                    class="card-title text-danger fw-bold fs-5 text-decoration-none"
+                  >
+                    Kit Gắn Túi
+                  </a>
+
+                  <p
+                    class="card-text text-secondary mt-2"
+                    style="font-size: 13px"
+                  >
+                    Đế sắt Givi TLB Kit: Phụ kiện giúp gắn túi Givi sau xe, có
+                    sẵn lỗ và ốc vít để gắn với ngàm tanklock...
+                  </p>
+                  <p>
+                    <span class="text-dark fs-5 fw-bold"> 200.000đ</span>
+                    <span
+                      class="text-secondary fw-normal text-decoration-line-through ms-2"
+                      style="font-size: 15px"
+                    ></span>
+                  </p>
+                  <div class="d-flex w-100 p-0 m-0">
+                    <button class="btn w-auto">
+                      <img src="Assets\Motorbikes\shopping-cart.png" />
+                      <span class="text-uppercase">Thêm vào giỏ hàng</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3" data-type="Nguoi">
+              <div class="card h-100 shadow-sm p-2">
+                <a href="#" class="mx-auto d-flex justify-content-center">
+                  <img
+                    src="Assets\Motorbikes\sfnthg.jpg"
+                    class="card-img-top product-detail"
+                    alt="..."
+                  />
+                </a>
+                <div class="card-body">
+                  <a
+                    href="#"
+                    class="card-title text-danger fw-bold fs-5 text-decoration-none"
+                  >
+                    Boot Stoke BLK
+                  </a>
+
+                  <p
+                    class="card-text text-secondary mt-2"
+                    style="font-size: 13px"
+                  >
+                    KHÍ HẬU - Lớp lót bằng da thoáng khí TIỆN NGHI - Dây giày có
+                    thể điều chỉnh CHẤT LIỆU CHÍNH...
+                  </p>
+                  <p>
+                    <span class="text-dark fs-5 fw-bold"> 3.540.000đ</span>
+                    <span
+                      class="text-secondary fw-normal text-decoration-line-through ms-2"
+                      style="font-size: 15px"
+                      >5.500.000đ</span
+                    >
+                  </p>
+                  <div class="d-flex w-100 p-0 m-0">
+                    <button class="btn w-auto">
+                      <img src="Assets\Motorbikes\shopping-cart.png" />
+                      <span class="text-uppercase">Thêm vào giỏ hàng</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3" data-type="Nguoi">
+              <div class="card h-100 shadow-sm p-2">
+                <a href="#" class="mx-auto d-flex justify-content-center">
+                  <img
+                    src="Assets\Motorbikes\rqhcro.jpg"
+                    class="card-img-top product-detail"
+                    alt="..."
+                  />
+                </a>
+                <div class="card-body">
+                  <a
+                    href="#"
+                    class="card-title text-danger fw-bold fs-5 text-decoration-none"
+                  >
+                    Áo sơ mi Henlow
+                  </a>
+
+                  <p
+                    class="card-text text-secondary mt-2"
+                    style="font-size: 13px"
+                  >
+                    Sản phẩm thuộc dòng trang phục của Triumph, được làm từ 100%
+                    cotton, mang lại cảm giác thoải mái khi mặc
+                  </p>
+                  <p>
+                    <span class="text-dark fs-5 fw-bold"> 2.000.000đ</span>
+                    <span
+                      class="text-secondary fw-normal text-decoration-line-through ms-2"
+                      style="font-size: 15px"
+                      >3.200.000đ</span
+                    >
+                  </p>
+                  <div class="d-flex w-100 p-0 m-0">
+                    <button class="btn w-auto">
+                      <img src="Assets\Motorbikes\shopping-cart.png" />
+                      <span class="text-uppercase">Thêm vào giỏ hàng</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3" data-type="Nguoi">
+              <div class="card h-100 shadow-sm p-2">
+                <a href="#" class="mx-auto d-flex justify-content-center">
+                  <img
+                    src="Assets\Motorbikes\bota3n.jpg"
+                    class="card-img-top product-detail"
+                    alt="..."
+                  />
+                </a>
+                <div class="card-body">
+                  <a
+                    href="#"
+                    class="card-title text-danger fw-bold fs-5 text-decoration-none"
+                  >
+                    Đồng hồ nam LDS
+                  </a>
+
+                  <p
+                    class="card-text text-secondary mt-2"
+                    style="font-size: 13px"
+                  >
+                    Vỏ thép không gỉ mạ và dây đeo mạ IP bóng màu vàng - hồng
+                    Khóa cài, chốt và nắp lưng làm bằng thép không gỉ...
+                  </p>
+
+                  <p>
+                    <span class="text-dark fs-5 fw-bold"> 20.200.000đ</span>
+                    <span
+                      class="text-secondary fw-normal text-decoration-line-through ms-2"
+                      style="font-size: 15px"
+                      >23.200.000đ</span
+                    >
+                  </p>
+                  <div class="d-flex w-100 p-0 m-0">
+                    <button class="btn w-auto">
+                      <img src="Assets\Motorbikes\shopping-cart.png" />
+                      <span class="text-uppercase">Thêm vào giỏ hàng</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3" data-type="Xe">
+              <div class="card h-100 shadow-sm p-2">
+                <a href="#" class="mx-auto d-flex justify-content-center">
+                  <img
+                    src="Assets\Motorbikes\lznceh.jpg"
+                    class="card-img-top product-detail"
+                    alt="..."
+                  />
+                </a>
+                <div class="card-body">
+                  <a
+                    href="#"
+                    class="card-title text-danger fw-bold fs-5 text-decoration-none"
+                  >
+                    Logo Ốp Bình Xăng
+                  </a>
+
+                  <p
+                    class="card-text text-secondary mt-2"
+                    style="font-size: 13px"
+                  >
+                    Là một phụ kiện trang trí giúp tăng tính thẩm mỹ cho xe máy.
+                    Tương thích với một số dòng xe
+                  </p>
+                  <p>
+                    <span class="text-dark fs-5 fw-bold"> 600.000đ</span>
+                    <span
+                      class="text-secondary fw-normal text-decoration-line-through ms-2"
+                      style="font-size: 15px"
+                    ></span>
+                  </p>
+                  <div class="d-flex w-100 p-0 m-0">
+                    <button class="btn w-auto">
+                      <img src="Assets\Motorbikes\shopping-cart.png" />
+                      <span class="text-uppercase">Thêm vào giỏ hàng</span>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>

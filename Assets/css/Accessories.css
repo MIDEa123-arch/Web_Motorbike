@@ -24,7 +24,6 @@
 }
 .filter-btn:hover .btn {
   background-color: rgb(234, 234, 234);
-
   font-weight: 700;
 }
 
@@ -36,4 +35,89 @@
   border: 1px solid gray !important;
   outline: none !important;
   box-shadow: none !important;
+}
+.filter-btn .btn:focus {
+  border: none;
+  box-shadow: none;
+  border-radius: 0px;
+}
+.drop-type {
+  border-bottom: 2px solid rgb(234, 234, 234);
+  padding: 17px 0px 17px 50px !important;
+}
+
+.drop-type input {
+  cursor: pointer !important;
+  border: 1px solid gray;
+}
+
+.drop-type input:focus {
+  box-shadow: none !important;
+  border: 1px solid gray;
+}
+
+.drop-type label {
+  cursor: pointer !important;
+}
+
+.filter-btn .btn:hover,
+.filter-btn .btn.active {
+  background-color: rgb(234, 234, 234);
+  font-weight: 700;
+}
+
+.filter-btn.active {
+  background-color: rgb(234, 234, 234);
+}
+.product-detail:hover {
+  transform: scale(1.05);
+}
+.product-detail {
+  width: 100% !important;
+  transition: transform 0.3s ease-in-out !important;
+}
+
+.card .btn {
+  margin-top: 20px !important;
+  box-shadow: none !important;
+  background-color: rgb(86, 84, 84);
+}
+
+.card .btn span {
+  color: #bcbcbc !important;
+  font-weight: bolder;
+  font-size: 14px;
+}
+
+.card .btn img {
+  width: 15%;
+  margin-right: 5px;
+  transition: none;
+}
+
+.card .btn:hover img,
+.card .btn:hover span {
+  filter: brightness(200%);
+}
+
+.card {
+  width: 18rem !important;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Chiều cao full của col */
+}
+
+.card-img-top {
+  height: 250px; /* Tuỳ chỉnh theo mong muốn */
+  object-fit: cover;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Giúp đẩy nội dung xuống */
+}
+
+.card-body .btn {
+  margin-top: auto; /* Đẩy nút xuống cuối card-body */
 }
