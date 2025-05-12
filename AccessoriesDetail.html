@@ -6,51 +6,231 @@
   <title>Chi tiết sản phẩm</title>
   <link href="Assets/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="Assets/css/AccessoriesDetail.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    .custom-breadcrumb {
+      background: none;
+      padding: 0;
+      margin-bottom: 16px;
+    }
+    .custom-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+      content: "/";
+      color: #888;
+      padding: 0 8px;
+    }
+    .custom-breadcrumb .breadcrumb-item {
+      color: #666;
+      font-size: 20px;
+      font-family: inherit;
+    }
+    .custom-breadcrumb .breadcrumb-item.active {
+      color: #888;
+      font-weight: 400;
+    }
+    .custom-breadcrumb .breadcrumb-item a {
+      color: #666;
+      text-decoration: none;
+    }
+    .custom-breadcrumb .breadcrumb-item a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
-<body style="background:#f7f7f7;">
-  <div class="container py-5">
-    <div class="row g-4">
-      <div class="col-md-5">
-        <div class="product-image-box bg-white p-3 rounded shadow-sm">
-          <img id="product-image" src="" alt="Sản phẩm" class="img-fluid rounded">
+<body>
+  <div class="container py-4">
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb" class="mb-4">
+      <ol class="breadcrumb custom-breadcrumb">
+        <li class="breadcrumb-item"><a href="Index.html">Trang chủ</a></li>
+        <li class="breadcrumb-item"><a href="Accessories.html">Phụ kiện</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Balo Moto</li>
+      </ol>
+    </nav>
+
+    <div class="row g-4 align-items-stretch">
+      <!-- Left Column - Product Images -->
+      <div class="col-lg-6">
+        <div class="product-gallery h-100 d-flex flex-column">
+          <div class="main-image-wrapper">
+            <div class="main-image">
+              <img id="product-image" src="" alt="Sản phẩm" class="img-fluid">
+            </div>
+            <div class="image-controls">
+              <button class="control-btn prev"><i class="fas fa-chevron-left"></i></button>
+              <button class="control-btn next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+          </div>
+          <div class="thumbnail-list">
+            <div class="thumbnail active">
+              <img src="Assets/Motorbikes/2005-harley-davidson-softail-deluxe-side-view-011.jpg" alt="Thumbnail 1">
+            </div>
+            <div class="thumbnail">
+              <img src="Assets/Motorbikes/2005-harley-davidson-softail-deluxe-side-view-011.jpg" alt="Thumbnail 2">
+            </div>
+            <div class="thumbnail">
+              <img src="Assets/Motorbikes/2005-harley-davidson-softail-deluxe-side-view-011.jpg" alt="Thumbnail 3">
+            </div>
+            <div class="thumbnail">
+              <img src="Assets/Motorbikes/2005-harley-davidson-softail-deluxe-side-view-011.jpg" alt="Thumbnail 4">
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col-md-7">
-        <div class="bg-white p-4 rounded shadow-sm">
-          <h2 id="product-title" class="fw-bold mb-3"></h2>
-          <div class="mb-2"><span class="badge bg-success" id="product-status">Còn hàng</span></div>
-          <div class="mb-3">
-            <span class="h4 text-danger fw-bold" id="product-price"></span>
-            <span class="text-muted ms-2" id="product-code"></span>
+
+      <!-- Right Column - Product Info -->
+      <div class="col-lg-6">
+        <div class="product-info h-100 d-flex flex-column">
+          <h1 class="product-title" id="product-title"></h1>
+          
+          <div class="product-meta">
+            <div class="rating-box">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="rating-text">4.7/5 (19 đánh giá)</span>
+            </div>
+            <div class="product-code" id="product-code"></div>
           </div>
-          <div class="mb-3" id="product-shortdesc"></div>
-          <button class="btn btn-primary btn-lg px-4" id="buy-btn">Mua hàng</button>
+
+          <div class="price-box">
+            <div class="current-price" id="product-price"></div>
+            <div class="old-price">2.990.000đ</div>
+          </div>
+
+          <div class="product-status">
+            <span class="status-badge" id="product-status">Còn hàng</span>
+          </div>
+
+          <div class="product-description" id="product-shortdesc"></div>
+
+          <div class="product-options">
+            <div class="option-group">
+              <label class="option-label">Màu sắc:</label>
+              <div class="color-options">
+                <div class="color-option active">
+                  <input type="radio" name="color" id="color-black" checked>
+                  <label for="color-black" class="color-label">
+                    <span class="color-dot" style="background: #000;"></span>
+                    <span class="color-name">Đen</span>
+                  </label>
+                </div>
+                <div class="color-option">
+                  <input type="radio" name="color" id="color-red">
+                  <label for="color-red" class="color-label">
+                    <span class="color-dot" style="background: #ff0000;"></span>
+                    <span class="color-name">Đỏ</span>
+                  </label>
+                </div>
+                <div class="color-option">
+                  <input type="radio" name="color" id="color-blue">
+                  <label for="color-blue" class="color-label">
+                    <span class="color-dot" style="background: #0000ff;"></span>
+                    <span class="color-name">Xanh dương</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <div class="quantity-selector">
+              <button class="qty-btn minus"><i class="fas fa-minus"></i></button>
+              <input type="number" value="1" min="1" max="99">
+              <button class="qty-btn plus"><i class="fas fa-plus"></i></button>
+            </div>
+            <button class="btn-buy-now" id="buy-btn">
+              <i class="fas fa-shopping-cart"></i>
+              Mua ngay
+            </button>
+            <button class="btn-add-wishlist">
+              <i class="far fa-heart"></i>
+            </button>
+          </div>
+
+          <div class="product-features">
+            <div class="feature-item">
+              <i class="fas fa-truck"></i>
+              <span>Miễn phí vận chuyển toàn quốc</span>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-shield-alt"></i>
+              <span>Bảo hành chính hãng 12 tháng</span>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-undo"></i>
+              <span>Đổi trả trong 30 ngày</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="row mt-4">
-      <div class="col-md-8">
-        <div class="bg-white p-4 rounded shadow-sm mb-4">
-          <h4 class="fw-bold mb-3">Mô tả sản phẩm</h4>
-          <div id="product-desc"></div>
+
+    <!-- Product Details Tabs -->
+    <div class="product-tabs mt-5">
+      <div class="tabs-header">
+        <button class="tab-btn active" data-tab="description">
+          <i class="fas fa-info-circle"></i>
+          Mô tả sản phẩm
+        </button>
+        <button class="tab-btn" data-tab="specs">
+          <i class="fas fa-list-check"></i>
+          Thông số kỹ thuật
+        </button>
+        <button class="tab-btn" data-tab="reviews">
+          <i class="fas fa-star"></i>
+          Đánh giá sản phẩm
+        </button>
+      </div>
+
+      <div class="tabs-content">
+        <div class="tab-pane active" id="description">
+          <div class="product-content" id="product-desc"></div>
         </div>
-        <div class="bg-white p-4 rounded shadow-sm mb-4">
-          <h4 class="fw-bold mb-3">Đặc tính</h4>
-          <ul id="product-features"></ul>
+        <div class="tab-pane" id="specs">
+          <div class="specs-table">
+            <ul id="product-features" class="feature-list"></ul>
+          </div>
         </div>
-        <div class="bg-white p-4 rounded shadow-sm">
-          <h4 class="fw-bold mb-3">Đánh giá</h4>
-          <div id="product-reviews">Chưa có đánh giá nào.</div>
+        <div class="tab-pane" id="reviews">
+          <div class="reviews-content" id="product-reviews">
+            <div class="reviews-summary">
+              <div class="rating-overview">
+                <div class="average-rating">4.7</div>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="total-reviews">19 đánh giá</div>
+              </div>
+            </div>
+            <div class="reviews-list">
+              <!-- Reviews will be loaded here -->
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="bg-white p-4 rounded shadow-sm">
-          <h5 class="fw-bold mb-3">Sản phẩm liên quan</h5>
-          <div id="related-products"></div>
+    </div>
+
+    <!-- Related Products -->
+    <div class="related-products mt-5">
+      <h3 class="section-title">Sản phẩm liên quan</h3>
+      <div class="related-carousel-wrapper">
+        <button class="carousel-arrow left" id="relatedPrev"><i class="fas fa-chevron-left"></i></button>
+        <div class="related-carousel" id="related-carousel">
+          <!-- Related products will be loaded here -->
         </div>
+        <button class="carousel-arrow right" id="relatedNext"><i class="fas fa-chevron-right"></i></button>
       </div>
     </div>
   </div>
+
   <script src="Assets/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
   <script src="Assets/js/AccessoriesDetail.js"></script>
 </body>

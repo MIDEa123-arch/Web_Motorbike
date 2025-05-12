@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng ký lái thử | Motorbike Web</title>
+  <link rel="stylesheet" href="Assets/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="Assets/css/TestDrive.css">
+</head>
+<body>
+  <div class="testdrive-container">
+    <div class="testdrive-row">
+      <!-- Cột trái: Form -->
+      <div class="testdrive-col-left">
+        <div class="testdrive-title">Đăng ký lái thử</div>
+        <form class="testdrive-form" id="testdrive-form">
+          <div class="form-group">
+            <label for="vehicle-group">Loại xe <span class="required">*</span></label>
+            <select id="vehicle-group" name="vehicle-group" required></select>
+          </div>
+          <div class="form-group">
+            <label for="vehicle-version">Phiên bản <span class="required">*</span></label>
+            <select id="vehicle-version" name="vehicle-version" required></select>
+          </div>
+          <div class="form-group">
+            <label>Đại lý <span class="required">*</span></label>
+            <div class="dealer-radio-group" id="dealer-radio-group">
+              <!-- Render radio bằng JS -->
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="fullname">Họ và tên <span class="required">*</span></label>
+            <input type="text" id="fullname" name="fullname" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Số điện thoại <span class="required">*</span></label>
+            <input type="tel" id="phone" name="phone" required pattern="[0-9]{9,12}">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+          </div>
+          <div class="form-group">
+            <label for="date">Ngày muốn lái thử <span class="required">*</span></label>
+            <input type="date" id="date" name="date" required>
+          </div>
+          <div class="form-group">
+            <label for="note">Ghi chú</label>
+            <textarea id="note" name="note" rows="2"></textarea>
+          </div>
+          <div class="form-group form-check">
+            <input type="checkbox" id="license-check" required>
+            <label for="license-check">Tôi đã có giấy phép lái xe mô tô hợp lệ <span class="required">*</span></label>
+          </div>
+          <button type="submit" class="testdrive-btn">Đăng ký lái thử</button>
+        </form>
+      </div>
+      <!-- Cột phải: Preview xe -->
+      <div class="testdrive-col-right">
+        <div class="vehicle-preview" id="vehicle-preview">
+          <!-- Render preview bằng JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="testdrive-footer">
+    <div class="footer-col">
+      <div class="footer-title">Liên hệ</div>
+      <div class="footer-info"><i class="fas fa-phone"></i> Hotline: <a href="tel:123456789">123456789</a></div>
+      <div class="footer-info"><i class="fas fa-envelope"></i> Email: webmotorbike@gmail.com</div>
+    </div>
+    <div class="footer-col">
+      <div class="footer-title">Địa chỉ đại lý</div>
+      <div class="footer-info">Q7: Toà nhà Paragon, số 3 Nguyễn Lương Bằng, P.Tân Phú, Quận 7, TP.HCM</div>
+      <div class="footer-info">Q2: 63 Nguyễn Cơ Thạch, P. An Lợi Đông, TP. Thủ Đức, TP.HCM</div>
+      <div class="footer-info">HN: Số 40 Phố Ngô Gia Tự, P.Đức Giang, Long Biên, Hà Nội</div>
+    </div>
+    <div class="footer-col">
+      <div class="footer-title">Kết nối</div>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+      <div class="footer-info">© 2024 Motorbike Web</div>
+    </div>
+  </footer>
+  <script src="Assets/js/TestDrive.js"></script>
+</body>
+</html> 
