@@ -1,4 +1,5 @@
 @import url("Contact.css");
+@import url("product.css");
 .home img {
   width: 16px;
   height: 16px;
@@ -100,4 +101,38 @@
 }
 .gradient-overlay {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+.bike-toy {
+  padding: 10px;
+  width: 330px;
+  background-color: white;
+  border: 10px solid rgb(203, 203, 203);
+}
+
+.bike-toy img {
+  transition: 0.3s ease-in-out;
+}
+.bike-toy:hover img {
+  scale: 1.05;
+}
+
+.bike-toy:hover h6 {
+  color: red !important;
+}
+
+.same-type {
+  width: auto;
+}
+
+.same-type img {
+  width: 250px;
+  height: 150px;
+  transition: 0.3s ease-in-out;
+}
+
+.same-type:hover img {
+  scale: 1.03;
+}
+.same-type:hover .name {
+  color: red !important;
 }
