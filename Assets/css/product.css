@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Spartan:wght@100..900&family=Roboto:wght@900&display=swap");
+@import url("TrangChu.css");
 
 * {
   font-family: "Inter", sans-serif;
@@ -112,7 +112,7 @@ html {
   display: inline-block;
   text-decoration: none;
   font-size: 21px;
-  font-weight: 400;
+  font-weight: 500;
   filter: brightness(50%);
   color: #000000;
   text-align: center;
@@ -124,24 +124,24 @@ html {
 }
 
 .menu ul li button:hover {
-  font-weight: 850;
+  font-weight: 700;
 }
 
 .menu ul li button::before {
   content: attr(title);
   display: block;
-  font-weight: 850;
+  font-weight: 700;
   overflow: hidden;
   visibility: hidden;
   height: 0;
 }
 
 button.active {
-  font-weight: 850;
+  font-weight: 700;
 }
 
 button.active::before {
-  font-weight: 850;
+  font-weight: 700;
 }
 
 .third-section {
