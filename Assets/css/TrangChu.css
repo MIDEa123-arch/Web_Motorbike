@@ -876,7 +876,7 @@ html {
   z-index: -1;
 }
 
-.table {
+.sub-table {
   width: 630px;
   display: flex;
   flex-wrap: wrap;
@@ -897,7 +897,7 @@ html {
   border: 2px solid black;
 }
 
-.table button {
+.sub-table button {
   width: 150px;
   height: 40px;
   cursor: pointer;
@@ -909,7 +909,7 @@ html {
   color: black;
 }
 
-.table button:hover {
+.sub-table button:hover {
   background-color: black;
   color: white;
 }

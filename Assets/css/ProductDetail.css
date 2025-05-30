@@ -1,5 +1,3 @@
-@import url("Contact.css");
-@import url("product.css");
 .home img {
   width: 16px;
   height: 16px;
@@ -54,6 +52,7 @@
   transform: scale(1.1);
 }
 .pic {
+  cursor: pointer;
   display: flex;
   justify-items: center;
   padding: 15px;

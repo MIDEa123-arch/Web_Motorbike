@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="Assets\css\TrangChu.css" rel="stylesheet" />
     <link href="Assets\css\ProductDetail.css" rel="stylesheet" />
+    <link href="Assets\css\Contact.css" rel="stylesheet" />
     <link
       href="Assets\bootstrap-5.0.2-dist\css\bootstrap.min.css"
       rel="stylesheet"
@@ -117,7 +119,7 @@
           font-size: 12px;
           text-decoration: none;
           color: #a2a2a2;
-          margin-top: -1px;
+          margin-top: 0px;
         "
         >M 1000 R</span
       >
@@ -166,7 +168,11 @@
           >
         </div>
         <div class="col-4" style="margin-top: -10px; margin-left: 70px">
-          <img src="Assets\Motorbikes\M.jpg" style="width: 500px" />
+          <img
+            src="Assets\Motorbikes\M.jpg"
+            style="width: 500px"
+            id="mainImg"
+          />
         </div>
         <div class="col-4 d-flex p-0 m-0 justify-content-end">
           <div class="d-flex flex-column align-items-end">
@@ -190,13 +196,13 @@
         </div>
       </div>
       <div class="container-fluid d-flex gap-4 mt-5 justify-content-center">
-        <div class="pic" style="margin-left: 100px">
+        <div class="pic" style="margin-left: 100px" onclick="changeImg(this)">
           <img src="Assets\Motorbikes\M1000R.jpg" class="w-100" />
         </div>
-        <div class="pic">
+        <div class="pic" onclick="changeImg(this)">
           <img src="Assets\Motorbikes\M1000R2.jpg" class="w-100" />
         </div>
-        <div class="pic">
+        <div class="pic" onclick="changeImg(this)">
           <img src="Assets\Motorbikes\BMW-M1000R-2025-2.jpg" class="w-100" />
         </div>
       </div>
