@@ -6,6 +6,16 @@ function parseCurrency(value) {
   return parseInt(value.replace(/[^\d]/g, ""));
 }
 
+function updateSTT() {
+  const allTbody = document.querySelectorAll("tbody");
+  allTbody.forEach((tbody, index) => {
+    const sttCell = tbody.querySelector("th");
+    if (sttCell) {
+      sttCell.innerText = index + 1;
+    }
+  });
+}
+
 function updateSummary() {
   const rows = document.querySelectorAll("tbody");
   let totalQuantity = 0;
@@ -47,9 +57,13 @@ document.querySelectorAll("button").forEach((button) => {
   button.addEventListener("click", function () {
     const row = button.closest("tbody");
     row.remove();
-    updateSummary();
+    updateSTT(); // Cập nhật lại STT
+    updateSummary(); // Cập nhật lại tổng số lượng và giá
   });
 });
 
 // Gọi khi trang tải lần đầu
-window.onload = updateSummary;
+window.onload = () => {
+  updateSTT();
+  updateSummary();
+};
