@@ -1,205 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chi tiết sản phẩm</title>
-  <link href="Assets/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="Assets/css/AccessoriesDetail.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <style>
-    .custom-breadcrumb {
-      background: none;
-      padding: 0;
-      margin-bottom: 16px;
-    }
-    .custom-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
-      content: "/";
-      color: #888;
-      padding: 0 8px;
-    }
-    .custom-breadcrumb .breadcrumb-item {
-      color: #666;
-      font-size: 20px;
-      font-family: inherit;
-    }
-    .custom-breadcrumb .breadcrumb-item.active {
-      color: #888;
-      font-weight: 400;
-    }
-    .custom-breadcrumb .breadcrumb-item a {
-      color: #666;
-      text-decoration: none;
-    }
-    .custom-breadcrumb .breadcrumb-item a:hover {
-      text-decoration: underline;
-    }
-  </style>
-</head>
-<body>
-  <div class="container py-4">
-    <!-- Breadcrumb -->
-    <nav aria-label="breadcrumb" class="mb-4">
-      <ol class="breadcrumb custom-breadcrumb">
-        <li class="breadcrumb-item"><a href="Index.html">Trang chủ</a></li>
-        <li class="breadcrumb-item"><a href="Accessories.html">Phụ kiện</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Balo Moto</li>
-      </ol>
-    </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi tiết phụ kiện</title>
 
-    <div class="row g-4 align-items-stretch">
-      <!-- Left Column - Product Images -->
-      <div class="col-lg-6">
-        <div class="product-gallery h-100 d-flex flex-column">
-          <div class="main-image-wrapper">
-            <div class="main-image">
-              <img id="product-image" src="" alt="Sản phẩm" class="img-fluid">
-            </div>
-            <div class="image-controls">
-              <button class="control-btn prev"><i class="fas fa-chevron-left"></i></button>
-              <button class="control-btn next"><i class="fas fa-chevron-right"></i></button>
-            </div>
-          </div>
-          <div class="thumbnail-list">
-            <div class="thumbnail active">
-              <img src="Assets/Motorbikes/2005-harley-davidson-softail-deluxe-side-view-011.jpg" alt="Thumbnail 1">
-            </div>
-            <div class="thumbnail">
-              <img src="Assets/Motorbikes/2005-harley-davidson-softail-deluxe-side-view-011.jpg" alt="Thumbnail 2">
-            </div>
-            <div class="thumbnail">
-              <img src="Assets/Motorbikes/2005-harley-davidson-softail-deluxe-side-view-011.jpg" alt="Thumbnail 3">
-            </div>
-            <div class="thumbnail">
-              <img src="Assets/Motorbikes/2005-harley-davidson-softail-deluxe-side-view-011.jpg" alt="Thumbnail 4">
-            </div>
-          </div>
-        </div>
-      </div>
+    <link href="Assets\css\AccessoriesDetail.css" rel="stylesheet" />
+    <link href="Assets\css\ProductDetail.css" rel="stylesheet" />
+    <link href="Assets\css\Contact.css" rel="stylesheet" />
+    <link
+      href="Assets\bootstrap-5.0.2-dist\css\bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      .custom-breadcrumb {
+        background: none;
+        padding: 0;
+        margin-bottom: 16px;
+      }
+      .custom-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+        content: "/";
+        color: #888;
+        padding: 0 8px;
+      }
+      .custom-breadcrumb .breadcrumb-item {
+        color: #666;
+        font-size: 20px;
+        font-family: inherit;
+      }
+      .custom-breadcrumb .breadcrumb-item.active {
+        color: #888;
+        font-weight: 400;
+      }
+      .custom-breadcrumb .breadcrumb-item a {
+        color: #666;
+        text-decoration: none;
+      }
+      .custom-breadcrumb .breadcrumb-item a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="ShoppingCart.html" class="cart-icon" style="z-index: 1000">
+      <img src="Assets/Motorbikes/shopping-cart1.png" alt="Giỏ hàng" />
+      <span class="cart-count">4</span>
+    </a>
+    <!-- Navbar -->
+    <div class="my-navbar">
+      <a href="Index.html">
+        <img
+          class="my-logo"
+          src="Assets/Motorbikes/[CITYPNG.COM]HD Valorant White Official Logo With Symbol PNG - 5000x5000 1.png"
+        />
+      </a>
 
-      <!-- Right Column - Product Info -->
-      <div class="col-lg-6">
-        <div class="product-info h-100 d-flex flex-column">
-          <h1 class="product-title" id="product-title"></h1>
-          
-          <div class="product-meta">
-            <div class="rating-box">
-              <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
+      <div style="display: flex">
+        <ul>
+          <li>
+            <div class="my-dropdown">
+              <a href="Product.html">bikes</a>
+              <div class="my-morenavbar">
+                <ul>
+                  <li><a href="Product.html?filter=M">m</a></li>
+                  <li><div class="my-stick2"></div></li>
+                  <li>
+                    <a href="Product.html?filter=Heritage">heritage</a>
+                  </li>
+                  <li><div class="my-stick2"></div></li>
+                  <li>
+                    <a href="Product.html?filter=Roadster">roadster</a>
+                  </li>
+                  <li><div class="my-stick2"></div></li>
+                  <li>
+                    <a href="Product.html?filter=Sport">sport</a>
+                  </li>
+                  <li><div class="my-stick2"></div></li>
+                  <li>
+                    <a href="Product.html?filter=Tour">tour</a>
+                  </li>
+                  <li><div class="my-stick2"></div></li>
+                  <li>
+                    <a href="Product.html?filter=Urban Mobility"
+                      >urban mobility</a
+                    >
+                  </li>
+                </ul>
               </div>
-              <span class="rating-text">4.7/5 (19 đánh giá)</span>
+
+              <d class="my-overlay"> </d>
             </div>
-            <div class="product-code" id="product-code"></div>
-          </div>
-
-          <div class="price-box">
-            <div class="current-price" id="product-price"></div>
-            <div class="old-price">2.990.000đ</div>
-          </div>
-
-          <div class="product-status">
-            <span class="status-badge" id="product-status">Còn hàng</span>
-          </div>
-
-          <div class="product-description" id="product-shortdesc"></div>
-
-          <div class="product-options">
-            <div class="option-group">
-              <label class="option-label">Màu sắc:</label>
-              <div class="color-options">
-                <div class="color-option active">
-                  <input type="radio" name="color" id="color-black" checked>
-                  <label for="color-black" class="color-label">
-                    <span class="color-dot" style="background: #000;"></span>
-                    <span class="color-name">Đen</span>
-                  </label>
-                </div>
-                <div class="color-option">
-                  <input type="radio" name="color" id="color-red">
-                  <label for="color-red" class="color-label">
-                    <span class="color-dot" style="background: #ff0000;"></span>
-                    <span class="color-name">Đỏ</span>
-                  </label>
-                </div>
-                <div class="color-option">
-                  <input type="radio" name="color" id="color-blue">
-                  <label for="color-blue" class="color-label">
-                    <span class="color-dot" style="background: #0000ff;"></span>
-                    <span class="color-name">Xanh dương</span>
-                  </label>
-                </div>
+          </li>
+          <li>
+            <a href="Accessories.html">accessories</a>
+          </li>
+          <li><a href="#">stories</a></li>
+          <li><a href="Contact.html">contact</a></li>
+          <li>
+            <div class="my-dropdown1">
+              <a href="#">services</a>
+              <div class="my-morenavbar">
+                <ul style="margin-right: 150px">
+                  <li><a href="#">bảo hành xe</a></li>
+                  <li><div class="my-stick2"></div></li>
+                  <li><a href="#">bảo dưỡng xe</a></li>
+                  <li><div class="my-stick2"></div></li>
+                  <li><a href="#">câu hỏi thường gặp</a></li>
+                </ul>
               </div>
+              <d class="my-overlay"> </d>
             </div>
-          </div>
-
-          <div class="action-buttons">
-            <div class="quantity-selector">
-              <button class="qty-btn minus"><i class="fas fa-minus"></i></button>
-              <input type="number" value="1" min="1" max="99">
-              <button class="qty-btn plus"><i class="fas fa-plus"></i></button>
-            </div>
-            <button class="btn-buy-now" id="buy-btn">
-              <i class="fas fa-shopping-cart"></i>
-              Mua ngay
-            </button>
-            <button class="btn-add-wishlist">
-              <i class="far fa-heart"></i>
-            </button>
-          </div>
-
-          <div class="product-features">
-            <div class="feature-item">
-              <i class="fas fa-truck"></i>
-              <span>Miễn phí vận chuyển toàn quốc</span>
-            </div>
-            <div class="feature-item">
-              <i class="fas fa-shield-alt"></i>
-              <span>Bảo hành chính hãng 12 tháng</span>
-            </div>
-            <div class="feature-item">
-              <i class="fas fa-undo"></i>
-              <span>Đổi trả trong 30 ngày</span>
-            </div>
-          </div>
-        </div>
+          </li>
+          <li><div class="my-stick"></div></li>
+          <li style="margin-top: -1px; margin-left: -45px">
+            <a class="my-location" href="Contact.html">
+              <img
+                src="Assets/Motorbikes/[CITYPNG.COM]GPS Location White Symbol Icon Transparent PNG - 1000x1000 2.png"
+              />
+            </a>
+          </li>
+          <li style="margin-top: -1px; margin-left: -30px; margin-right: 10px">
+            <a class="my-location" href="LogIndex.html">
+              <img
+                style="width: 28px; height: 28px"
+                src="Assets/Motorbikes/user.png"
+              />
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
-
-    <!-- Product Details Tabs -->
-    <div class="product-tabs mt-5">
-      <div class="tabs-header">
-        <button class="tab-btn active" data-tab="description">
-          <i class="fas fa-info-circle"></i>
-          Mô tả sản phẩm
-        </button>
-        <button class="tab-btn" data-tab="specs">
-          <i class="fas fa-list-check"></i>
-          Thông số kỹ thuật
-        </button>
-        <button class="tab-btn" data-tab="reviews">
-          <i class="fas fa-star"></i>
-          Đánh giá sản phẩm
-        </button>
+    <div class="container py-4">
+      <!-- Breadcrumb -->
+      <div
+        class="container w-100 home h-auto d-flex justify-content-start gap-2 ps-4"
+        style="margin-top: 100px"
+      >
+        <a
+          href="Index.html"
+          class="text-decoration-none"
+          style="margin-top: -6px"
+        >
+          <img src="Assets\Motorbikes\home.png" />
+        </a>
+        <img src="Assets\Motorbikes\ar.png" class="arrow" />
+        <a href="Product.html" class="fw-bold text-link text-uppercase">
+          Accessories
+        </a>
+        <img src="Assets\Motorbikes\ar.png" class="arrow" />
+        <span
+          class="fw-normal"
+          style="
+            font-size: 12px;
+            text-decoration: none;
+            color: #a2a2a2;
+            margin-top: 0px;
+            text-transform: uppercase;
+          "
+          >Áo Triumph Team Pit</span
+        >
       </div>
 
-      <div class="tabs-content">
-        <div class="tab-pane active" id="description">
-          <div class="product-content" id="product-desc"></div>
-        </div>
-        <div class="tab-pane" id="specs">
-          <div class="specs-table">
-            <ul id="product-features" class="feature-list"></ul>
+      <div class="row g-4 align-items-stretch">
+        <!-- Left Column - Product Images -->
+        <div class="col-lg-6">
+          <div class="product-gallery h-100 d-flex flex-column">
+            <div class="main-image-wrapper">
+              <div class="main-image">
+                <img
+                  id="product-image"
+                  src="Assets\Motorbikes\auds3r.jpg"
+                  alt="Sản phẩm"
+                  class="img-fluid"
+                />
+              </div>
+              <div class="image-controls">
+                <button class="control-btn prev">
+                  <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="control-btn next">
+                  <i class="fas fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="thumbnail-list">
+              <div class="thumbnail active">
+                <img
+                  src="Assets/Motorbikes/2005-harley-davidson-softail-deluxe-side-view-011.jpg"
+                  alt="Thumbnail 1"
+                />
+              </div>
+              <div class="thumbnail">
+                <img
+                  src="Assets/Motorbikes/2005-harley-davidson-softail-deluxe-side-view-011.jpg"
+                  alt="Thumbnail 2"
+                />
+              </div>
+              <div class="thumbnail">
+                <img
+                  src="Assets/Motorbikes/2005-harley-davidson-softail-deluxe-side-view-011.jpg"
+                  alt="Thumbnail 3"
+                />
+              </div>
+              <div class="thumbnail">
+                <img
+                  src="Assets/Motorbikes/2005-harley-davidson-softail-deluxe-side-view-011.jpg"
+                  alt="Thumbnail 4"
+                />
+              </div>
+            </div>
           </div>
         </div>
-        <div class="tab-pane" id="reviews">
-          <div class="reviews-content" id="product-reviews">
-            <div class="reviews-summary">
-              <div class="rating-overview">
-                <div class="average-rating">4.7</div>
+
+        <!-- Right Column - Product Info -->
+        <div class="col-lg-6">
+          <div class="product-info h-100 d-flex flex-column">
+            <h1 class="product-title" id="product-title"></h1>
+
+            <div class="product-meta">
+              <div class="rating-box">
                 <div class="stars">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
@@ -207,31 +230,285 @@
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star-half-alt"></i>
                 </div>
-                <div class="total-reviews">19 đánh giá</div>
+                <span class="rating-text">4.7/5 (19 đánh giá)</span>
+              </div>
+              <div class="product-code" id="product-code"></div>
+            </div>
+
+            <div class="price-box">
+              <div class="current-price" id="product-price"></div>
+              <div class="old-price">2.990.000đ</div>
+            </div>
+
+            <div class="product-status">
+              <span class="status-badge" id="product-status">Còn hàng</span>
+            </div>
+
+            <div class="product-description" id="product-shortdesc"></div>
+
+            <div class="product-options">
+              <div class="option-group">
+                <label class="option-label">Màu sắc:</label>
+                <div class="color-options">
+                  <div class="color-option active">
+                    <input type="radio" name="color" id="color-black" checked />
+                    <label for="color-black" class="color-label">
+                      <span class="color-dot" style="background: #000"></span>
+                      <span class="color-name">Đen</span>
+                    </label>
+                  </div>
+                  <div class="color-option">
+                    <input type="radio" name="color" id="color-red" />
+                    <label for="color-red" class="color-label">
+                      <span
+                        class="color-dot"
+                        style="background: #ff0000"
+                      ></span>
+                      <span class="color-name">Đỏ</span>
+                    </label>
+                  </div>
+                  <div class="color-option">
+                    <input type="radio" name="color" id="color-blue" />
+                    <label for="color-blue" class="color-label">
+                      <span
+                        class="color-dot"
+                        style="background: #0000ff"
+                      ></span>
+                      <span class="color-name">Xanh dương</span>
+                    </label>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="reviews-list">
-              <!-- Reviews will be loaded here -->
+
+            <div class="action-buttons">
+              <div class="quantity-selector">
+                <button class="qty-btn minus">
+                  <i class="fas fa-minus"></i>
+                </button>
+                <input type="number" value="1" min="1" max="99" />
+                <button class="qty-btn plus">
+                  <i class="fas fa-plus"></i>
+                </button>
+              </div>
+              <button class="btn-buy-now" id="buy-btn">
+                <i class="fas fa-shopping-cart"></i>
+                Mua ngay
+              </button>
+              <button class="btn-add-wishlist">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+
+            <div class="product-features">
+              <div class="feature-item">
+                <i class="fas fa-truck"></i>
+                <span>Miễn phí vận chuyển toàn quốc</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-shield-alt"></i>
+                <span>Bảo hành chính hãng 12 tháng</span>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-undo"></i>
+                <span>Đổi trả trong 30 ngày</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Related Products -->
-    <div class="related-products mt-5">
-      <h3 class="section-title">Sản phẩm liên quan</h3>
-      <div class="related-carousel-wrapper">
-        <button class="carousel-arrow left" id="relatedPrev"><i class="fas fa-chevron-left"></i></button>
-        <div class="related-carousel" id="related-carousel">
-          <!-- Related products will be loaded here -->
+      <!-- Product Details Tabs -->
+      <div class="product-tabs mt-5">
+        <div class="tabs-header">
+          <button class="tab-btn active" data-tab="description">
+            <i class="fas fa-info-circle"></i>
+            Mô tả sản phẩm
+          </button>
+          <button class="tab-btn" data-tab="specs">
+            <i class="fas fa-list-check"></i>
+            Thông số kỹ thuật
+          </button>
+          <button class="tab-btn" data-tab="reviews">
+            <i class="fas fa-star"></i>
+            Đánh giá sản phẩm
+          </button>
         </div>
-        <button class="carousel-arrow right" id="relatedNext"><i class="fas fa-chevron-right"></i></button>
+
+        <div class="tabs-content">
+          <div class="tab-pane active" id="description">
+            <div class="product-content" id="product-desc"></div>
+          </div>
+          <div class="tab-pane" id="specs">
+            <div class="specs-table">
+              <ul id="product-features" class="feature-list"></ul>
+            </div>
+          </div>
+          <div class="tab-pane" id="reviews">
+            <div class="reviews-content" id="product-reviews">
+              <div class="reviews-summary">
+                <div class="rating-overview">
+                  <div class="average-rating">4.7</div>
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </div>
+                  <div class="total-reviews">19 đánh giá</div>
+                </div>
+              </div>
+              <div class="reviews-list">
+                <!-- Reviews will be loaded here -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Related Products -->
+      <div class="related-products mt-5">
+        <h3 class="section-title">Sản phẩm liên quan</h3>
+        <div class="related-carousel-wrapper">
+          <button class="carousel-arrow left" id="relatedPrev">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="related-carousel" id="related-carousel">
+            <!-- Related products will be loaded here -->
+          </div>
+          <button class="carousel-arrow right" id="relatedNext">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
       </div>
     </div>
-  </div>
 
-  <script src="Assets/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
-  <script src="Assets/js/AccessoriesDetail.js"></script>
-</body>
-</html> 
+    <!-- footer -->
+    <div class="custom-footer">
+      <table class="custom-footer-table">
+        <tr>
+          <td class="footer-first-row">
+            <span>Tìm mẫu xe Motorbike bạn yêu thích </span>
+          </td>
+          <td class="footer-second-row">
+            <a
+              href="https://www.bmw-motorrad-motorsport.com/"
+              class="footer-motorbike-link"
+            >
+              BMW motorrad Motorsport
+              <img class="footer-arrow" src="Assets/Motorbikes/Arrow 3.svg" />
+            </a>
+          </td>
+          <td class="footer-third-row">
+            <a
+              href="https://www.bmw-motorcycles.vn/vi/public-pool/content-pool/cookie-disclaimer.html"
+              class="footer-side-link"
+              >Cookies</a
+            >
+          </td>
+        </tr>
+
+        <tr>
+          <td class="footer-first-row1" rowspan="3">
+            <a href="Product.html" class="footer-choice-row">
+              <img src="Assets/Motorbikes/Group 22.png" />
+              <span>tất cả mẫu xe</span>
+            </a>
+          </td>
+          <td class="footer-second-row">
+            <a href="https://www.bmw.vn/" class="footer-motorbike-link">
+              BMW Automotive
+              <img class="footer-arrow" src="Assets/Motorbikes/Arrow 3.svg" />
+            </a>
+          </td>
+          <td class="footer-third-row">
+            <a href="../Contact/Contact.html" class="footer-side-link"
+              >Liên hệ</a
+            >
+          </td>
+        </tr>
+
+        <tr>
+          <td class="footer-second-row">
+            <a
+              href="https://www.mini-vietnam.com/"
+              class="footer-motorbike-link"
+            >
+              Mini
+              <img class="footer-arrow" src="Assets/Motorbikes/Arrow 3.svg" />
+            </a>
+          </td>
+          <td class="footer-third-row">
+            <a
+              href="https://www.bmw-motorcycles.vn/vi/public-pool/content-pool/legalnotice.html"
+              class="footer-side-link"
+              >Từ chối trách nhiệm</a
+            >
+          </td>
+        </tr>
+
+        <tr>
+          <td class="footer-second-row">
+            <a href="https://www.bmwgroup.com/" class="footer-motorbike-link">
+              BMW Group
+              <img class="footer-arrow" src="Assets/Motorbikes/Arrow 3.svg" />
+            </a>
+          </td>
+          <td class="footer-third-row">
+            <a
+              href="https://www.bmw-motorcycles.vn/vi/public-pool/content-pool/privacy.html"
+              class="footer-side-link"
+              >Chính sách bảo mật</a
+            >
+          </td>
+        </tr>
+      </table>
+
+      <ul class="footer-social-media">
+        <li class="footer-social-link">
+          <a href="https://www.facebook.com/Official.BMWMotorradVietnam/">
+            <img src="Assets/Motorbikes/facebook 2.png" />Facebook
+          </a>
+        </li>
+        <li class="footer-social-link">
+          <a href="https://www.instagram.com/bmwmotorradvn/">
+            <img src="Assets/Motorbikes/instagram 1.png" />Instagram
+          </a>
+        </li>
+        <li class="footer-social-link">
+          <a
+            href="https://www.youtube.com/BMWMotorradVietnam/?sub_confirmation=1"
+          >
+            <img src="Assets/Motorbikes/youtube (1) 1.png" />Youtube
+          </a>
+        </li>
+        <li class="footer-social-link" style="margin-left: -20px">
+          <a href="https://zalo.me/bmwmotorradvietnam">
+            <img src="Assets/Motorbikes/logos 1.png" />X
+          </a>
+        </li>
+      </ul>
+
+      <div class="footer-extra">
+        <div class="footer-lang-box">
+          <img
+            class="img1"
+            src="Assets/Motorbikes/public_24dp_434343_FILL0_wght400_GRAD0_opsz24.png"
+          />
+          <img
+            class="img2"
+            src="Assets/Motorbikes/public_24dp_0000F5_FILL0_wght400_GRAD0_opsz24.png"
+          />
+          <span>Change Language</span>
+        </div>
+
+        <div class="footer-highlight">
+          <span class="footer-slogan">make life a drive</span>
+        </div>
+      </div>
+    </div>
+    <script src="Assets/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="Assets/js/AccessoriesDetail.js"></script>
+  </body>
+</html>
