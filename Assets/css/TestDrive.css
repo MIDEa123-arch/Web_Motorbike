@@ -1,38 +1,72 @@
-body { background: #f7f7f7; font-family: 'Segoe UI', Arial, sans-serif; }
-.testdrive-container { max-width: 1200px; margin: 40px auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 16px rgba(0,0,0,0.07); padding: 32px 24px; }
-.testdrive-row { display: flex; gap: 40px; }
-.testdrive-col-left { flex: 0.85; min-width: 320px; }
-.testdrive-col-right { flex: 1.25; min-width: 380px; display: flex; align-items: flex-start; }
-.testdrive-title { font-size: 2.1rem; font-weight: 700; color: #b00; margin-bottom: 24px; letter-spacing: 1px; }
-.testdrive-form { background: #fafafa; border-radius: 10px; padding: 28px 22px; box-shadow: 0 1px 8px rgba(0,0,0,0.04); }
-.form-group { margin-bottom: 20px; display: flex; flex-direction: column; }
-.form-group label { font-weight: 500; color: #222; margin-bottom: 7px; font-size: 1rem; }
-.form-group input, .form-group select, .form-group textarea { border-radius: 7px; border: 1.5px solid #ccc; padding: 10px 12px; font-size: 1.08rem; background: #fff; }
-.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: #b00; outline: none; }
-.form-group input[type="date"] { max-width: 220px; }
-.form-group textarea { min-height: 44px; }
-.required { color: #b00; margin-left: 2px; }
-.form-check { display: flex; align-items: center; margin-top: 8px; }
-.form-check input[type="checkbox"] { width: 20px; height: 20px; margin-right: 10px; accent-color: #b00; }
-.dealer-radio-group { display: flex; flex-direction: column; gap: 7px; }
-.dealer-radio { display: flex; align-items: center; gap: 8px; font-size: 1rem; }
-.dealer-radio input[type="radio"] { accent-color: #b00; width: 18px; height: 18px; }
-.testdrive-btn { background: #b00; color: #fff; font-weight: 700; border-radius: 7px; padding: 13px 0; border: none; width: 100%; font-size: 1.15rem; margin-top: 10px; transition: background 0.2s; letter-spacing: 1px; }
-.testdrive-btn:hover { background: #222; }
-.testdrive-btn.loading { opacity: 0.7; pointer-events: none; position: relative; }
-.testdrive-btn .spinner { display: inline-block; width: 20px; height: 20px; border: 2.5px solid #fff; border-top: 2.5px solid #b00; border-radius: 50%; animation: spin 0.7s linear infinite; vertical-align: middle; margin-right: 8px; }
-@keyframes spin { 100% { transform: rotate(360deg); } }
-.vehicle-preview { width: 100%; background: #fff; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.07); padding: 32px 18px; text-align: center; }
-.vehicle-preview .preview-img { width: 100%; max-width: 340px; height: 200px; object-fit: contain; margin: 0 auto 22px auto; border-radius: 12px; background: #f7f7f7; box-shadow: 0 2px 12px rgba(0,0,0,0.10); }
-.vehicle-preview .preview-name { font-size: 1.35rem; font-weight: 700; color: #b00; margin-bottom: 8px; }
-.vehicle-preview .preview-price { color: #222; font-size: 1.1rem; margin-bottom: 10px; }
-.vehicle-preview .preview-desc { color: #555; font-size: 1rem; margin-bottom: 10px; }
-.vehicle-preview .preview-logo { width: 80px; margin-bottom: 10px; }
-.testdrive-footer { display: flex; justify-content: space-between; align-items: flex-start; background: #222; color: #fff; padding: 32px 10vw 18px 10vw; margin-top: 48px; gap: 32px; }
-.footer-col { flex: 1; min-width: 220px; }
-.footer-title { font-weight: 700; font-size: 1.1rem; margin-bottom: 10px; color: #fff; letter-spacing: 1px; }
-.footer-info { font-size: 1rem; margin-bottom: 7px; color: #eee; }
-.footer-social { display: flex; gap: 16px; margin-bottom: 10px; }
-.footer-social a { color: #fff; font-size: 1.3rem; transition: color 0.2s; }
-.footer-social a:hover { color: #b00; }
-@media (max-width: 900px) { .testdrive-row { flex-direction: column; gap: 0; } .testdrive-footer { flex-direction: column; padding: 24px 4vw 12px 4vw; gap: 18px; } .vehicle-preview { margin-top: 32px; } .testdrive-col-left, .testdrive-col-right { min-width: 0; } } 
+.stick {
+  border: 1px solid black;
+}
+
+.motor-inf {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  font-size: 16.5px;
+}
+
+.form-select:focus,
+.form-select:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.select-type {
+  background-color: rgb(243, 243, 243) !important;
+  border: 0px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  color: rgb(106, 104, 104) !important;
+  padding: 12px 0px 12px 13px !important;
+}
+.form-check {
+  font-size: 13.5px !important;
+}
+
+.form-check-input:focus,
+.form-check-input:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.select-title {
+  background-color: rgb(243, 243, 243) !important;
+  border: 0px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: rgb(106, 104, 104) !important;
+  padding: 12px 0px 12px 13px !important;
+}
+
+.select-title:focus,
+.select-title:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.ui-datepicker-trigger {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  margin-left: 6px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.form-check:focus,
+.form-check:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.btn-sub {
+  font-size: 17px !important;
+  transition: ease-in-out 0.3s !important;
+}
+
+.btn-sub:hover {
+  background-color: black !important;
+}

@@ -1,91 +1,429 @@
 <!DOCTYPE html>
-<html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Đăng ký lái thử | Motorbike Web</title>
-  <link rel="stylesheet" href="Assets/bootstrap-5.0.2-dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <link rel="stylesheet" href="Assets/css/TestDrive.css">
-</head>
-<body>
-  <div class="testdrive-container">
-    <div class="testdrive-row">
-      <!-- Cột trái: Form -->
-      <div class="testdrive-col-left">
-        <div class="testdrive-title">Đăng ký lái thử</div>
-        <form class="testdrive-form" id="testdrive-form">
-          <div class="form-group">
-            <label for="vehicle-group">Loại xe <span class="required">*</span></label>
-            <select id="vehicle-group" name="vehicle-group" required></select>
-          </div>
-          <div class="form-group">
-            <label for="vehicle-version">Phiên bản <span class="required">*</span></label>
-            <select id="vehicle-version" name="vehicle-version" required></select>
-          </div>
-          <div class="form-group">
-            <label>Đại lý <span class="required">*</span></label>
-            <div class="dealer-radio-group" id="dealer-radio-group">
-              <!-- Render radio bằng JS -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="Assets\css\jquery-ui-1.13.0\jquery-ui.css" rel="stylesheet" />
+    <link href="Assets\css\TrangChu.css" rel="stylesheet" />
+    <link href="Assets\css\ProductDetail.css" rel="stylesheet" />
+    <link href="Assets\css\Contact.css" rel="stylesheet" />
+    <link href="Assets\css\TestDrive.css" rel="stylesheet" />
+    <link
+      href="Assets\bootstrap-5.0.2-dist\css\bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <title>TestDrive</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="my-navbar">
+      <a href="Index.html">
+        <img
+          class="my-logo"
+          src="Assets/Motorbikes/[CITYPNG.COM]HD Valorant White Official Logo With Symbol PNG - 5000x5000 1.png"
+        />
+      </a>
+
+      <div style="display: flex">
+        <ul>
+          <li>
+            <div class="my-dropdown">
+              <a href="Product.html">bikes</a>
+              <div class="my-morenavbar">
+                <ul>
+                  <li><a href="Product.html?filter=M">m</a></li>
+                  <li><div class="my-stick2"></div></li>
+                  <li>
+                    <a href="Product.html?filter=Heritage">heritage</a>
+                  </li>
+                  <li><div class="my-stick2"></div></li>
+                  <li>
+                    <a href="Product.html?filter=Roadster">roadster</a>
+                  </li>
+                  <li><div class="my-stick2"></div></li>
+                  <li>
+                    <a href="Product.html?filter=Sport">sport</a>
+                  </li>
+                  <li><div class="my-stick2"></div></li>
+                  <li>
+                    <a href="Product.html?filter=Tour">tour</a>
+                  </li>
+                  <li><div class="my-stick2"></div></li>
+                  <li>
+                    <a href="Product.html?filter=Urban Mobility"
+                      >urban mobility</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <d class="my-overlay"> </d>
             </div>
-          </div>
-          <div class="form-group">
-            <label for="fullname">Họ và tên <span class="required">*</span></label>
-            <input type="text" id="fullname" name="fullname" required>
-          </div>
-          <div class="form-group">
-            <label for="phone">Số điện thoại <span class="required">*</span></label>
-            <input type="tel" id="phone" name="phone" required pattern="[0-9]{9,12}">
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email">
-          </div>
-          <div class="form-group">
-            <label for="date">Ngày muốn lái thử <span class="required">*</span></label>
-            <input type="date" id="date" name="date" required>
-          </div>
-          <div class="form-group">
-            <label for="note">Ghi chú</label>
-            <textarea id="note" name="note" rows="2"></textarea>
-          </div>
-          <div class="form-group form-check">
-            <input type="checkbox" id="license-check" required>
-            <label for="license-check">Tôi đã có giấy phép lái xe mô tô hợp lệ <span class="required">*</span></label>
-          </div>
-          <button type="submit" class="testdrive-btn">Đăng ký lái thử</button>
-        </form>
+          </li>
+          <li>
+            <a href="Accessories.html">accessories</a>
+          </li>
+          <li><a href="#">stories</a></li>
+          <li><a href="Contact.html">contact</a></li>
+          <li>
+            <div class="my-dropdown1">
+              <a href="#">services</a>
+              <div class="my-morenavbar">
+                <ul style="margin-right: 150px">
+                  <li><a href="#">bảo hành xe</a></li>
+                  <li><div class="my-stick2"></div></li>
+                  <li><a href="#">bảo dưỡng xe</a></li>
+                  <li><div class="my-stick2"></div></li>
+                  <li><a href="#">câu hỏi thường gặp</a></li>
+                </ul>
+              </div>
+              <d class="my-overlay"> </d>
+            </div>
+          </li>
+          <li><div class="my-stick"></div></li>
+          <li style="margin-top: -1px; margin-left: -45px">
+            <a class="my-location" href="Contact.html">
+              <img
+                src="Assets/Motorbikes/[CITYPNG.COM]GPS Location White Symbol Icon Transparent PNG - 1000x1000 2.png"
+              />
+            </a>
+          </li>
+          <li style="margin-top: -1px; margin-left: -30px; margin-right: 10px">
+            <a class="my-location" href="LogIndex.html">
+              <img
+                style="width: 28px; height: 28px"
+                src="Assets/Motorbikes/user.png"
+              />
+            </a>
+          </li>
+        </ul>
       </div>
-      <!-- Cột phải: Preview xe -->
-      <div class="testdrive-col-right">
-        <div class="vehicle-preview" id="vehicle-preview">
-          <!-- Render preview bằng JS -->
+    </div>
+
+    <a href="ShoppingCart.html" class="cart-icon" style="z-index: 1000">
+      <img src="Assets/Motorbikes/shopping-cart1.png" alt="Giỏ hàng" />
+      <span class="cart-count">4</span>
+    </a>
+    <div class="container p-0" style="width: 1200px; margin-top: 150px">
+      <div
+        class="w-100 d-flex justify-content-center align-items-center gap-5 row p-0"
+      >
+        <div class="stick col-4 m-0"></div>
+        <span
+          class="text-uppercase text-dark fw-bold fs-3 col-3 d-flex justify-content-center align-items-center"
+          >đăng ký lái thử</span
+        >
+        <div class="stick col-4 m-0"></div>
+      </div>
+    </div>
+
+    <div class="container p-0" style="width: 1200px; margin-top: 50px">
+      <div class="row p-0 w-100">
+        <div class="col-4 pe-4 border-end border-secondary p-0">
+          <form class="d-grid p-0">
+            <span class="motor-inf">Thông tin xe</span>
+            <select
+              id="selectLoaiXe"
+              class="form-select mt-4 text-uppercase select-type"
+            >
+              <option selected>Loại xe(*)</option>
+              <option value="M">M</option>
+              <option value="Heritage">Heritage</option>
+              <option value="Roadster">Roadster</option>
+              <option value="Sport">Sport</option>
+              <option value="Tour">Tour</option>
+              <option value="Urban Mobility">Urban Mobility</option>
+            </select>
+            <select
+              id="selectTenXe"
+              required
+              class="form-select mt-4 text-uppercase select-type"
+              aria-label="Default select example"
+            ></select>
+
+            <span class="motor-inf mt-5">Nơi đăng ký(*)</span>
+            <div class="form-check mt-4">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                id="flexRadioDefault1"
+              />
+              <label class="form-check-label ms-2" for="flexRadioDefault1">
+                Valor Motorrad Vietnam - Dealership Q7 TP.HCM
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                id="flexRadioDefault2"
+                checked
+              />
+              <label class="form-check-label ms-2" for="flexRadioDefault2">
+                Valor Motorrad East Saigon - Dealership Q2 TP.HCM
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                id="flexRadioDefault2"
+                checked
+              />
+              <label class="form-check-label ms-2" for="flexRadioDefault2">
+                Valor Motorrad Hanoi Dealership
+              </label>
+            </div>
+            <span class="motor-inf mt-5">Thông tin khách hàng</span>
+            <select
+              class="form-select mt-4 select-title"
+              aria-label="Default select example"
+            >
+              <option selected>Danh xưng</option>
+              <option value="1">Ông</option>
+              <option value="2">Bà</option>
+              <option value="3">Anh</option>
+              <option value="4">Chị</option>
+            </select>
+            <input
+              class="mt-4 select-title"
+              required
+              type="text"
+              name="name"
+              placeholder="Họ tên(*)"
+            />
+            <input
+              class="mt-4 select-title"
+              required
+              type="tel"
+              name="phone"
+              placeholder="Điện thoại(*)"
+            />
+            <input
+              class="mt-4 select-title"
+              required
+              type="email"
+              name="email"
+              placeholder="Địa chỉ email(*)"
+            />
+            <div
+              class="mt-4 w-100 d-flex p-0 justify-items-center align-items-center"
+            >
+              <input
+                type="text"
+                id="ngaylaithu"
+                name="date"
+                class="select-title w-100"
+                placeholder="Ngày lái thử(*)"
+                required
+              />
+              <img
+                id="calendar-icon"
+                style="margin-left: -30px; cursor: pointer"
+                src="Assets/Motorbikes/calendar.png"
+                width="20px"
+                height="20px"
+                alt="Test ảnh"
+              />
+            </div>
+
+            <textarea
+              class="select-title mt-4"
+              style="resize: none; height: 90px"
+              placeholder="Ghi chú"
+            ></textarea>
+
+            <div
+              class="form-check mt-4 d-flex justify-items-center gap-2 align-items-center"
+            >
+              <input
+                style="border: 1px solid black; cursor: pointer"
+                required
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckIndeterminate"
+              />
+              <label
+                class="form-check-label"
+                for="flexCheckIndeterminate"
+                style="cursor: pointer; margin-top: 5px"
+              >
+                Tôi đã có giấy phép lái xe mô tô hợp lệ (*)
+              </label>
+            </div>
+            <span class="p-0 mt-4 fst-italic" style="font-size: 13px"
+              >Quý khách vui lòng điền đầy đủ các thông tin có dấu (*)</span
+            >
+            <button
+              class="btn text-white border-0 bg-danger w-50 text-uppercase p-2 ps-3 pe-3 btn-sub mx-auto mt-4 rounded-0"
+            >
+              đăng ký lái thử
+            </button>
+          </form>
+        </div>
+        <div class="col-8 p-0 ps-5 flex-wrap justify-items-center">
+          <span class="fs-5 text-uppercase motor-inf">Valor motorrad</span>
+          <div class="stick mt-2 border-danger" style="width: 40px"></div>
+          <img
+            id="imgXe"
+            src=""
+            style="
+              margin-top: 60px;
+              margin-left: 100px;
+              width: 100%;
+              max-width: 600px;
+              display: none;
+            "
+          />
+          <br />
+          <br />
+
+          <span class="p-0 fst-italic" style="font-size: 13px"
+            >Do một số lý do khách quan, thông tin xe và ngày lái thử có thể
+            thay đổi, vui lòng kiểm tra email và nhận điện thoại của nhân viên
+            tư vấn để có lịch hẹn chính xác nhất.
+          </span>
+          <br />
+          <br />
+          <span class="p-0 fst-italic" style="font-size: 13px">
+            Cảm ơn quý khách !</span
+          >
         </div>
       </div>
     </div>
-  </div>
-  <footer class="testdrive-footer">
-    <div class="footer-col">
-      <div class="footer-title">Liên hệ</div>
-      <div class="footer-info"><i class="fas fa-phone"></i> Hotline: <a href="tel:123456789">123456789</a></div>
-      <div class="footer-info"><i class="fas fa-envelope"></i> Email: webmotorbike@gmail.com</div>
-    </div>
-    <div class="footer-col">
-      <div class="footer-title">Địa chỉ đại lý</div>
-      <div class="footer-info">Q7: Toà nhà Paragon, số 3 Nguyễn Lương Bằng, P.Tân Phú, Quận 7, TP.HCM</div>
-      <div class="footer-info">Q2: 63 Nguyễn Cơ Thạch, P. An Lợi Đông, TP. Thủ Đức, TP.HCM</div>
-      <div class="footer-info">HN: Số 40 Phố Ngô Gia Tự, P.Đức Giang, Long Biên, Hà Nội</div>
-    </div>
-    <div class="footer-col">
-      <div class="footer-title">Kết nối</div>
-      <div class="footer-social">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
+
+    <!-- footer -->
+    <div class="custom-footer mt-5">
+      <table class="custom-footer-table">
+        <tr>
+          <td class="footer-first-row">
+            <span>Tìm mẫu xe Motorbike bạn yêu thích </span>
+          </td>
+          <td class="footer-second-row">
+            <a
+              href="https://www.bmw-motorrad-motorsport.com/"
+              class="footer-motorbike-link"
+            >
+              BMW motorrad Motorsport
+              <img class="footer-arrow" src="Assets/Motorbikes/Arrow 3.svg" />
+            </a>
+          </td>
+          <td class="footer-third-row">
+            <a
+              href="https://www.bmw-motorcycles.vn/vi/public-pool/content-pool/cookie-disclaimer.html"
+              class="footer-side-link"
+              >Cookies</a
+            >
+          </td>
+        </tr>
+
+        <tr>
+          <td class="footer-first-row1" rowspan="3">
+            <a href="Product.html" class="footer-choice-row">
+              <img src="Assets/Motorbikes/Group 22.png" />
+              <span>tất cả mẫu xe</span>
+            </a>
+          </td>
+          <td class="footer-second-row">
+            <a href="https://www.bmw.vn/" class="footer-motorbike-link">
+              BMW Automotive
+              <img class="footer-arrow" src="Assets/Motorbikes/Arrow 3.svg" />
+            </a>
+          </td>
+          <td class="footer-third-row">
+            <a href="../Contact/Contact.html" class="footer-side-link"
+              >Liên hệ</a
+            >
+          </td>
+        </tr>
+
+        <tr>
+          <td class="footer-second-row">
+            <a
+              href="https://www.mini-vietnam.com/"
+              class="footer-motorbike-link"
+            >
+              Mini
+              <img class="footer-arrow" src="Assets/Motorbikes/Arrow 3.svg" />
+            </a>
+          </td>
+          <td class="footer-third-row">
+            <a
+              href="https://www.bmw-motorcycles.vn/vi/public-pool/content-pool/legalnotice.html"
+              class="footer-side-link"
+              >Từ chối trách nhiệm</a
+            >
+          </td>
+        </tr>
+
+        <tr>
+          <td class="footer-second-row">
+            <a href="https://www.bmwgroup.com/" class="footer-motorbike-link">
+              BMW Group
+              <img class="footer-arrow" src="Assets/Motorbikes/Arrow 3.svg" />
+            </a>
+          </td>
+          <td class="footer-third-row">
+            <a
+              href="https://www.bmw-motorcycles.vn/vi/public-pool/content-pool/privacy.html"
+              class="footer-side-link"
+              >Chính sách bảo mật</a
+            >
+          </td>
+        </tr>
+      </table>
+
+      <ul class="footer-social-media">
+        <li class="footer-social-link">
+          <a href="https://www.facebook.com/Official.BMWMotorradVietnam/">
+            <img src="Assets/Motorbikes/facebook 2.png" />Facebook
+          </a>
+        </li>
+        <li class="footer-social-link">
+          <a href="https://www.instagram.com/bmwmotorradvn/">
+            <img src="Assets/Motorbikes/instagram 1.png" />Instagram
+          </a>
+        </li>
+        <li class="footer-social-link">
+          <a
+            href="https://www.youtube.com/BMWMotorradVietnam/?sub_confirmation=1"
+          >
+            <img src="Assets/Motorbikes/youtube (1) 1.png" />Youtube
+          </a>
+        </li>
+        <li class="footer-social-link" style="margin-left: -20px">
+          <a href="https://zalo.me/bmwmotorradvietnam">
+            <img src="Assets/Motorbikes/logos 1.png" />X
+          </a>
+        </li>
+      </ul>
+
+      <div class="footer-extra">
+        <div class="footer-lang-box">
+          <img
+            class="img1"
+            src="Assets/Motorbikes/public_24dp_434343_FILL0_wght400_GRAD0_opsz24.png"
+          />
+          <img
+            class="img2"
+            src="Assets/Motorbikes/public_24dp_0000F5_FILL0_wght400_GRAD0_opsz24.png"
+          />
+          <span>Change Language</span>
+        </div>
+
+        <div class="footer-highlight">
+          <span class="footer-slogan">make life a drive</span>
+        </div>
       </div>
-      <div class="footer-info">© 2024 Motorbike Web</div>
     </div>
-  </footer>
-  <script src="Assets/js/TestDrive.js"></script>
-</body>
-</html> 
+
+    <script src="Assets/js/jquery-3.7.1.min.js"></script>
+    <script src="Assets/css/jquery-ui-1.13.0/jquery-ui.min.js"></script>
+    <script src="Assets/js/TestDrive.js"></script>
+  </body>
+</html>
