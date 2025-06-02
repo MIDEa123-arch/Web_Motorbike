@@ -692,3 +692,35 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+#buy-btn:hover {
+  color: white !important;
+}
+
+.amount::-webkit-outer-spin-button,
+.amount::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.card-title {
+  font-size: 18px !important;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 900 !important;
+}
+
+.card:hover img {
+  scale: 1.05;
+}
+
+.card img {
+  transition: ease-in-out 0.3s;
+}
+
+.card:hover .card-title {
+  color: #e53935 !important;
+}
+
+.card .card-title {
+  transition: ease-in-out 0.3s;
+}

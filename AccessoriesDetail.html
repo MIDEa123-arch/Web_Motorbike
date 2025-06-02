@@ -4,18 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chi tiết phụ kiện</title>
-
-    <link href="Assets\css\AccessoriesDetail.css" rel="stylesheet" />
-    <link href="Assets\css\ProductDetail.css" rel="stylesheet" />
-    <link href="Assets\css\Contact.css" rel="stylesheet" />
     <link
       href="Assets\bootstrap-5.0.2-dist\css\bootstrap.min.css"
       rel="stylesheet"
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      href="Assets\fontawesome-free-6.4.2-web\css\all.min.css"
     />
+    <link href="Assets\css\AccessoriesDetail.css" rel="stylesheet" />
+    <link href="Assets\css\ProductDetail.css" rel="stylesheet" />
+    <link href="Assets\css\Contact.css" rel="stylesheet" />
+
     <style>
       .custom-breadcrumb {
         background: none;
@@ -148,7 +148,7 @@
           <img src="Assets\Motorbikes\home.png" />
         </a>
         <img src="Assets\Motorbikes\ar.png" class="arrow" />
-        <a href="Product.html" class="fw-bold text-link text-uppercase">
+        <a href="Accessories.html" class="fw-bold text-link text-uppercase">
           Accessories
         </a>
         <img src="Assets\Motorbikes\ar.png" class="arrow" />
@@ -189,28 +189,10 @@
             </div>
             <div class="thumbnail-list">
               <div class="thumbnail active">
-                <img
-                  src="Assets/Motorbikes/2005-harley-davidson-softail-deluxe-side-view-011.jpg"
-                  alt="Thumbnail 1"
-                />
+                <img src="Assets\Motorbikes\auds3r.jpg" alt="Thumbnail 1" />
               </div>
               <div class="thumbnail">
-                <img
-                  src="Assets/Motorbikes/2005-harley-davidson-softail-deluxe-side-view-011.jpg"
-                  alt="Thumbnail 2"
-                />
-              </div>
-              <div class="thumbnail">
-                <img
-                  src="Assets/Motorbikes/2005-harley-davidson-softail-deluxe-side-view-011.jpg"
-                  alt="Thumbnail 3"
-                />
-              </div>
-              <div class="thumbnail">
-                <img
-                  src="Assets/Motorbikes/2005-harley-davidson-softail-deluxe-side-view-011.jpg"
-                  alt="Thumbnail 4"
-                />
+                <img src="Assets\Motorbikes\roxkpe.jpg" alt="Thumbnail 2" />
               </div>
             </div>
           </div>
@@ -219,7 +201,7 @@
         <!-- Right Column - Product Info -->
         <div class="col-lg-6">
           <div class="product-info h-100 d-flex flex-column">
-            <h1 class="product-title" id="product-title"></h1>
+            <h1 class="product-title">Áo Triumph Team Pit</h1>
 
             <div class="product-meta">
               <div class="rating-box">
@@ -232,24 +214,28 @@
                 </div>
                 <span class="rating-text">4.7/5 (19 đánh giá)</span>
               </div>
-              <div class="product-code" id="product-code"></div>
+              <div class="product-code">Mã sản phẩm: TRIUMP-RS278</div>
             </div>
 
             <div class="price-box">
-              <div class="current-price" id="product-price"></div>
-              <div class="old-price">2.990.000đ</div>
+              <div class="current-price">2.890.000đ</div>
+              <div class="old-price">3.200.000đ</div>
             </div>
 
             <div class="product-status">
-              <span class="status-badge" id="product-status">Còn hàng</span>
+              <span class="status-badge">Còn hàng</span>
             </div>
 
-            <div class="product-description" id="product-shortdesc"></div>
+            <div class="product-description">
+              Áo thun Triumph Team Pit 100% cotton, thoáng mát, mềm mại, với
+              nhiều hình in màu sắc tương phản nổi bật, phong cách thể thao cá
+              tính.
+            </div>
 
             <div class="product-options">
               <div class="option-group">
                 <label class="option-label">Màu sắc:</label>
-                <div class="color-options">
+                <div class="color-options d-flex gap-4">
                   <div class="color-option active">
                     <input type="radio" name="color" id="color-black" checked />
                     <label for="color-black" class="color-label">
@@ -262,9 +248,9 @@
                     <label for="color-red" class="color-label">
                       <span
                         class="color-dot"
-                        style="background: #ff0000"
+                        style="background: #787777"
                       ></span>
-                      <span class="color-name">Đỏ</span>
+                      <span class="color-name">Xám</span>
                     </label>
                   </div>
                   <div class="color-option">
@@ -274,7 +260,7 @@
                         class="color-dot"
                         style="background: #0000ff"
                       ></span>
-                      <span class="color-name">Xanh dương</span>
+                      <span class="color-name">Xanh</span>
                     </label>
                   </div>
                 </div>
@@ -286,15 +272,26 @@
                 <button class="qty-btn minus">
                   <i class="fas fa-minus"></i>
                 </button>
-                <input type="number" value="1" min="1" max="99" />
+                <input
+                  class="amount align-text-center"
+                  type="number"
+                  value="1"
+                  min="1"
+                  max="99"
+                />
                 <button class="qty-btn plus">
                   <i class="fas fa-plus"></i>
                 </button>
               </div>
-              <button class="btn-buy-now" id="buy-btn">
+              <a
+                href="ShoppingCart.html"
+                class="btn-buy-now"
+                id="buy-btn"
+                style="text-decoration: none"
+              >
                 <i class="fas fa-shopping-cart"></i>
                 Mua ngay
-              </button>
+              </a>
               <button class="btn-add-wishlist">
                 <i class="far fa-heart"></i>
               </button>
@@ -321,11 +318,11 @@
       <!-- Product Details Tabs -->
       <div class="product-tabs mt-5">
         <div class="tabs-header">
-          <button class="tab-btn active" data-tab="description">
+          <button class="tab-btn" data-tab="specs">
             <i class="fas fa-info-circle"></i>
             Mô tả sản phẩm
           </button>
-          <button class="tab-btn" data-tab="specs">
+          <button class="tab-btn" data-tab="thongSo">
             <i class="fas fa-list-check"></i>
             Thông số kỹ thuật
           </button>
@@ -336,12 +333,24 @@
         </div>
 
         <div class="tabs-content">
-          <div class="tab-pane active" id="description">
-            <div class="product-content" id="product-desc"></div>
-          </div>
           <div class="tab-pane" id="specs">
             <div class="specs-table">
-              <ul id="product-features" class="feature-list"></ul>
+              <ul class="feature-list">
+                <li>Chất liệu: 100% cotton cao cấp</li>
+                <li>Kiểu dáng: Unisex, phong cách thể thao</li>
+                <li>Họa tiết: In màu sắc tương phản nổi bật</li>
+                <li>Độ thoáng khí: Cao, thấm hút mồ hôi tốt</li>
+                <li>Bảo hành: 12 tháng</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-pane" id="thongSo">
+            <div class="specs-table">
+              <ul class="feature-list">
+                <li>Màu sắc: Đa dạng, in họa tiết nổi bật</li>
+                <li>Thoải mái: Thoáng mát, thấm hút mồ hôi tốt</li>
+                <li>Tính năng: Dễ phối đồ, thích hợp đi phố hoặc đi tour</li>
+              </ul>
             </div>
           </div>
           <div class="tab-pane" id="reviews">
@@ -370,16 +379,89 @@
       <!-- Related Products -->
       <div class="related-products mt-5">
         <h3 class="section-title">Sản phẩm liên quan</h3>
-        <div class="related-carousel-wrapper">
-          <button class="carousel-arrow left" id="relatedPrev">
-            <i class="fas fa-chevron-left"></i>
-          </button>
-          <div class="related-carousel" id="related-carousel">
-            <!-- Related products will be loaded here -->
+
+        <div class="d-flex w-100 p-0 m-0">
+          <div class="card h-100 p-2 border-0" style="width: 20rem">
+            <a
+              href="AccessoriesDetail.html"
+              class="mx-auto d-flex justify-content-center"
+            >
+              <img
+                src="Assets\Motorbikes\bota3n.jpg"
+                class="card-img-top product-detail"
+                alt="..."
+              />
+            </a>
+            <div class="card-body d-flex jutify-items-center">
+              <a
+                href="AccessoriesDetail.html"
+                class="card-title text-dark fw-bold fs-5 text-decoration-none mx-auto"
+              >
+                Đồng hồ nam LDS
+              </a>
+            </div>
           </div>
-          <button class="carousel-arrow right" id="relatedNext">
-            <i class="fas fa-chevron-right"></i>
-          </button>
+          <div class="card h-100 p-2 border-0" style="width: 20rem">
+            <a
+              href="AccessoriesDetail.html"
+              class="mx-auto d-flex justify-content-center"
+            >
+              <img
+                src="Assets\Motorbikes\sfnthg.jpg"
+                class="card-img-top product-detail"
+                alt="..."
+              />
+            </a>
+            <div class="card-body d-flex jutify-items-center">
+              <a
+                href="AccessoriesDetail.html"
+                class="card-title text-dark fw-bold fs-5 text-decoration-none mx-auto"
+              >
+                Boot Stoke BLK
+              </a>
+            </div>
+          </div>
+          <div class="card h-100 p-2 border-0" style="width: 20rem">
+            <a
+              href="AccessoriesDetail.html"
+              class="mx-auto d-flex justify-content-center"
+            >
+              <img
+                src="Assets\Motorbikes\dbntns.jpg"
+                class="card-img-top product-detail"
+                alt="..."
+              />
+            </a>
+            <div class="card-body d-flex jutify-items-center">
+              <a
+                href="AccessoriesDetail.html"
+                class="card-title text-dark fw-bold fs-5 text-decoration-none mx-auto"
+              >
+                Áo mưa
+              </a>
+            </div>
+          </div>
+
+          <div class="card h-100 p-2 border-0" style="width: 20rem">
+            <a
+              href="AccessoriesDetail.html"
+              class="mx-auto d-flex justify-content-center"
+            >
+              <img
+                src="Assets\Motorbikes\rqhcro.jpg"
+                class="card-img-top product-detail"
+                alt="..."
+              />
+            </a>
+            <div class="card-body d-flex jutify-items-center">
+              <a
+                href="AccessoriesDetail.html"
+                class="card-title text-dark fw-bold fs-5 text-decoration-none mx-auto"
+              >
+                Áo sơ mi henlow
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
