@@ -1,509 +1,417 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard - Motorbike Web</title>
-    <link
-      href="Assets\bootstrap-5.0.2-dist\css\bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="Assets\fontawesome-free-6.4.2-web\css\all.min.css"
-    />
-    <link href="Assets\css\Admin.css" rel="stylesheet" />
-  </head>
-  <body>
+    <link href="Assets\bootstrap-5.0.2-dist\css\bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="Assets\css\Admin.css" rel="stylesheet">
+</head>
+<body>
     <div class="admin-container">
-      <!-- Sidebar -->
-      <div class="sidebar">
-        <div class="logo">
-          <img
-            src="Assets/Motorbikes/[CITYPNG.COM]HD Valorant White Official Logo With Symbol PNG - 5000x5000 1.png"
-            alt="Logo"
-          />
-          <span>Admin</span>
-        </div>
-        <nav>
-          <ul>
-            <li class="active">
-              <a href="#dashboard">
-                <i class="fas fa-home"></i>
-                <span>Dashboard</span>
-              </a>
-            </li>
-            <li>
-              <a href="#products">
-                <i class="fas fa-motorcycle"></i>
-                <span>Quản lý sản phẩm</span>
-              </a>
-            </li>
-            <li>
-              <a href="#accessories">
-                <i class="fas fa-tools"></i>
-                <span>Quản lý phụ kiện</span>
-              </a>
-            </li>
-            <li>
-              <a href="#orders">
-                <i class="fas fa-shopping-cart"></i>
-                <span>Quản lý đơn hàng</span>
-              </a>
-            </li>
-            <li>
-              <a href="#users">
-                <i class="fas fa-users"></i>
-                <span>Quản lý người dùng</span>
-              </a>
-            </li>
-            <li>
-              <a href="#contacts">
-                <i class="fas fa-envelope"></i>
-                <span>Quản lý liên hệ</span>
-              </a>
-            </li>
-            <li>
-              <a href="#settings">
-                <i class="fas fa-cog"></i>
-                <span>Cài đặt</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-
-      <!-- Main Content -->
-      <div class="main-content">
-        <!-- Top Bar -->
-        <div class="top-bar">
-          <div class="search-box">
-            <i class="fas fa-search"></i>
-            <input type="text" placeholder="Tìm kiếm..." />
-          </div>
-          <div class="user-info">
-            <div class="notifications">
-              <i class="fas fa-bell"></i>
-              <span class="badge">3</span>
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="Assets/Motorbikes/[CITYPNG.COM]HD Valorant White Official Logo With Symbol PNG - 5000x5000 1.png" alt="Logo">
+                <span>Admin</span>
             </div>
-            <div class="user">
-              <img src="Assets/Motorbikes/admin-avatar.png" alt="Admin" />
-              <span>Admin</span>
-              <i class="fas fa-chevron-down"></i>
-            </div>
-          </div>
+            <nav>
+                <ul>
+                    <li class="active">
+                        <a href="#dashboard">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#products">
+                            <i class="fas fa-motorcycle"></i>
+                            <span>Quản lý sản phẩm</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#accessories">
+                            <i class="fas fa-tools"></i>
+                            <span>Quản lý phụ kiện</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#orders">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Quản lý đơn hàng</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#users">
+                            <i class="fas fa-users"></i>
+                            <span>Quản lý người dùng</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contacts">
+                            <i class="fas fa-envelope"></i>
+                            <span>Quản lý liên hệ</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#settings">
+                            <i class="fas fa-cog"></i>
+                            <span>Cài đặt</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
 
-        <!-- Dashboard Content -->
-        <div class="content">
-          <div class="section" id="dashboard-section">
-            <div class="dashboard">
-              <h2>Dashboard</h2>
-              <div class="stats-container">
-                <div class="stat-card">
-                  <div class="stat-icon">
-                    <i class="fas fa-motorcycle"></i>
-                  </div>
-                  <div class="stat-info">
-                    <h3>Tổng sản phẩm</h3>
-                    <p>150</p>
-                  </div>
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Top Bar -->
+            <div class="top-bar">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Tìm kiếm...">
                 </div>
-                <div class="stat-card">
-                  <div class="stat-icon">
-                    <i class="fas fa-shopping-cart"></i>
-                  </div>
-                  <div class="stat-info">
-                    <h3>Đơn hàng mới</h3>
-                    <p>25</p>
-                  </div>
+                <div class="user-info">
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="user">
+                        <img src="Assets/Motorbikes/admin-avatar.png" alt="Admin">
+                        <span>Admin</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
                 </div>
-                <div class="stat-card">
-                  <div class="stat-icon">
-                    <i class="fas fa-users"></i>
-                  </div>
-                  <div class="stat-info">
-                    <h3>Người dùng</h3>
-                    <p>1,250</p>
-                  </div>
-                </div>
-                <div class="stat-card">
-                  <div class="stat-icon">
-                    <i class="fas fa-dollar-sign"></i>
-                  </div>
-                  <div class="stat-info">
-                    <h3>Doanh thu</h3>
-                    <p>$25,000</p>
-                  </div>
-                </div>
-              </div>
-              <div class="recent-orders">
-                <h3>Đơn hàng gần đây</h3>
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th>ID</th>
-                      <th>Khách hàng</th>
-                      <th>Sản phẩm</th>
-                      <th>Giá</th>
-                      <th>Trạng thái</th>
-                      <th>Thao tác</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>#12345</td>
-                      <td>Nguyễn Văn A</td>
-                      <td>BMW S1000RR</td>
-                      <td>$25,000</td>
-                      <td><span class="status pending">Đang xử lý</span></td>
-                      <td>
-                        <button class="btn btn-sm btn-primary">Chi tiết</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>#12346</td>
-                      <td>Trần Thị B</td>
-                      <td>Ducati Panigale V4</td>
-                      <td>$30,000</td>
-                      <td><span class="status completed">Hoàn thành</span></td>
-                      <td>
-                        <button class="btn btn-sm btn-primary">Chi tiết</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>#12347</td>
-                      <td>Lê Văn C</td>
-                      <td>Kawasaki Ninja H2</td>
-                      <td>$28,000</td>
-                      <td><span class="status processing">Đang giao</span></td>
-                      <td>
-                        <button class="btn btn-sm btn-primary">Chi tiết</button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
             </div>
-          </div>
-          <div class="section" id="products-section" style="display: none">
-            <h2>Quản lý sản phẩm</h2>
-            <button class="btn btn-success mb-2" id="addProductBtn">
-              Thêm sản phẩm
-            </button>
-            <table class="table" id="productsTable">
-              <thead>
-                <tr>
-                  <th>ID</th>
-                  <th>Tên sản phẩm</th>
-                  <th>Giá</th>
-                  <th>Hãng</th>
-                  <th>Thao tác</th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
-          </div>
-          <div class="section" id="accessories-section" style="display: none">
-            <h2>Quản lý phụ kiện</h2>
-            <button class="btn btn-success mb-2" id="addAccessoryBtn">
-              Thêm phụ kiện
-            </button>
-            <table class="table" id="accessoriesTable">
-              <thead>
-                <tr>
-                  <th>ID</th>
-                  <th>Tên phụ kiện</th>
-                  <th>Giá</th>
-                  <th>Loại</th>
-                  <th>Thao tác</th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
-          </div>
-          <div class="section" id="orders-section" style="display: none">
-            <h2>Quản lý đơn hàng</h2>
-            <table class="table" id="ordersTable">
-              <thead>
-                <tr>
-                  <th>ID</th>
-                  <th>Khách hàng</th>
-                  <th>Sản phẩm</th>
-                  <th>Giá</th>
-                  <th>Trạng thái</th>
-                  <th>Thao tác</th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
-          </div>
-          <div class="section" id="users-section" style="display: none">
-            <h2>Quản lý người dùng</h2>
-            <button class="btn btn-success mb-2" id="addUserBtn">
-              Thêm người dùng
-            </button>
-            <table class="table" id="usersTable">
-              <thead>
-                <tr>
-                  <th>ID</th>
-                  <th>Tên</th>
-                  <th>Email</th>
-                  <th>Vai trò</th>
-                  <th>Thao tác</th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
-          </div>
-          <div class="section" id="contacts-section" style="display: none">
-            <h2>Quản lý liên hệ</h2>
-            <table class="table" id="contactsTable">
-              <thead>
-                <tr>
-                  <th>ID</th>
-                  <th>Tên</th>
-                  <th>Email</th>
-                  <th>Nội dung</th>
-                  <th>Thao tác</th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
-          </div>
-          <div class="section" id="settings-section" style="display: none">
-            <h2>Cài đặt</h2>
-            <form id="changePasswordForm" style="max-width: 400px">
-              <div class="mb-3">
-                <label for="oldPassword" class="form-label">Mật khẩu cũ</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  id="oldPassword"
-                  required
-                />
-              </div>
-              <div class="mb-3">
-                <label for="newPassword" class="form-label">Mật khẩu mới</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  id="newPassword"
-                  required
-                />
-              </div>
-              <div class="mb-3">
-                <label for="confirmPassword" class="form-label"
-                  >Xác nhận mật khẩu mới</label
-                >
-                <input
-                  type="password"
-                  class="form-control"
-                  id="confirmPassword"
-                  required
-                />
-              </div>
-              <button type="submit" class="btn btn-primary">
-                Đổi mật khẩu
-              </button>
-              <div id="changePasswordMsg" class="mt-2"></div>
-            </form>
-          </div>
 
-          <!-- Modal Sản phẩm -->
-          <div class="modal fade" id="productModal" tabindex="-1">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="productModalLabel">
-                    Thêm/Sửa sản phẩm
-                  </h5>
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                  ></button>
+            <!-- Dashboard Content -->
+            <div class="content">
+                <div class="section" id="dashboard-section">
+                    <div class="dashboard">
+                        <h2>Dashboard</h2>
+                        <div class="stats-container">
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-motorcycle"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>Tổng sản phẩm</h3>
+                                    <p>150</p>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>Đơn hàng mới</h3>
+                                    <p>25</p>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>Người dùng</h3>
+                                    <p>1,250</p>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-dollar-sign"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <h3>Doanh thu</h3>
+                                    <p>$25,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recent-orders">
+                            <h3>Đơn hàng gần đây</h3>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Khách hàng</th>
+                                        <th>Sản phẩm</th>
+                                        <th>Giá</th>
+                                        <th>Trạng thái</th>
+                                        <th>Thao tác</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#12345</td>
+                                        <td>Nguyễn Văn A</td>
+                                        <td>BMW S1000RR</td>
+                                        <td>$25,000</td>
+                                        <td><span class="status pending">Đang xử lý</span></td>
+                                        <td>
+                                            <button class="btn btn-sm btn-primary">Chi tiết</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#12346</td>
+                                        <td>Trần Thị B</td>
+                                        <td>Ducati Panigale V4</td>
+                                        <td>$30,000</td>
+                                        <td><span class="status completed">Hoàn thành</span></td>
+                                        <td>
+                                            <button class="btn btn-sm btn-primary">Chi tiết</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#12347</td>
+                                        <td>Lê Văn C</td>
+                                        <td>Kawasaki Ninja H2</td>
+                                        <td>$28,000</td>
+                                        <td><span class="status processing">Đang giao</span></td>
+                                        <td>
+                                            <button class="btn btn-sm btn-primary">Chi tiết</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
-                <div class="modal-body">
-                  <form id="productForm">
-                    <input type="hidden" id="productId" />
-                    <div class="mb-3">
-                      <label for="productName" class="form-label"
-                        >Tên sản phẩm</label
-                      >
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="productName"
-                        required
-                      />
-                    </div>
-                    <div class="mb-3">
-                      <label for="productPrice" class="form-label">Giá</label>
-                      <input
-                        type="number"
-                        class="form-control"
-                        id="productPrice"
-                        required
-                      />
-                    </div>
-                    <div class="mb-3">
-                      <label for="productBrand" class="form-label">Hãng</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="productBrand"
-                        required
-                      />
-                    </div>
-                    <button type="submit" class="btn btn-primary">Lưu</button>
-                  </form>
+                <div class="section" id="products-section" style="display:none">
+                    <h2>Quản lý sản phẩm</h2>
+                    <button class="btn btn-success mb-2" id="addProductBtn">Thêm sản phẩm</button>
+                    <table class="table" id="productsTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Giá</th>
+                                <th>Hãng</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
                 </div>
-              </div>
+                <div class="section" id="accessories-section" style="display:none">
+                    <h2>Quản lý phụ kiện</h2>
+                    <button class="btn btn-success mb-2" id="addAccessoryBtn">Thêm phụ kiện</button>
+                    <table class="table" id="accessoriesTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Tên phụ kiện</th>
+                                <th>Giá</th>
+                                <th>Loại</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div class="section" id="orders-section" style="display:none">
+                    <h2>Quản lý đơn hàng</h2>
+                    <table class="table" id="ordersTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Khách hàng</th>
+                                <th>Sản phẩm</th>
+                                <th>Giá</th>
+                                <th>Trạng thái</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div class="section" id="users-section" style="display:none">
+                    <h2>Quản lý người dùng</h2>
+                    <button class="btn btn-success mb-2" id="addUserBtn">Thêm người dùng</button>
+                    <table class="table" id="usersTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Tên</th>
+                                <th>Email</th>
+                                <th>Vai trò</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div class="section" id="contacts-section" style="display:none">
+                    <h2>Quản lý liên hệ</h2>
+                    <table class="table" id="contactsTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Tên</th>
+                                <th>Email</th>
+                                <th>Nội dung</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div class="section" id="settings-section" style="display:none">
+                    <h2>Cài đặt</h2>
+                    <form id="changePasswordForm" style="max-width:400px">
+                        <div class="mb-3">
+                            <label for="oldPassword" class="form-label">Mật khẩu cũ</label>
+                            <input type="password" class="form-control" id="oldPassword" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="newPassword" class="form-label">Mật khẩu mới</label>
+                            <input type="password" class="form-control" id="newPassword" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">Xác nhận mật khẩu mới</label>
+                            <input type="password" class="form-control" id="confirmPassword" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Đổi mật khẩu</button>
+                        <div id="changePasswordMsg" class="mt-2"></div>
+                    </form>
+                </div>
+
+                <!-- Modal Sản phẩm -->
+                <div class="modal fade" id="productModal" tabindex="-1">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="productModalLabel">Thêm/Sửa sản phẩm</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                      </div>
+                      <div class="modal-body">
+                        <form id="productForm">
+                          <input type="hidden" id="productId">
+                          <div class="mb-3">
+                            <label for="productName" class="form-label">Tên sản phẩm</label>
+                            <input type="text" class="form-control" id="productName" required>
+                          </div>
+                          <div class="mb-3">
+                            <label for="productPrice" class="form-label">Giá</label>
+                            <input type="number" class="form-control" id="productPrice" required>
+                          </div>
+                          <div class="mb-3">
+                            <label for="productBrand" class="form-label">Hãng</label>
+                            <select class="form-select" id="productBrand" name="productBrand" required>
+                              <option value="">Chọn hãng...</option>
+                              <option value="BMW">BMW</option>
+                              <option value="Ducati">Ducati</option>
+                              <option value="Kawasaki">Kawasaki</option>
+                            </select>
+                          </div>
+                          <div class="mb-3">
+                            <label for="productImage" class="form-label">Hình ảnh</label>
+                            <input type="file" class="form-control" id="productImage" accept="image/*">
+                          </div>
+                          <button type="submit" class="btn btn-primary">Lưu</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Modal Phụ kiện -->
+                <div class="modal fade" id="accessoryModal" tabindex="-1">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="accessoryModalLabel">Thêm/Sửa phụ kiện</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                      </div>
+                      <div class="modal-body">
+                        <form id="accessoryForm">
+                          <input type="hidden" id="accessoryId">
+                          <div class="mb-3">
+                            <label for="accessoryName" class="form-label">Tên phụ kiện</label>
+                            <input type="text" class="form-control" id="accessoryName" required>
+                          </div>
+                          <div class="mb-3">
+                            <label for="accessoryPrice" class="form-label">Giá</label>
+                            <input type="number" class="form-control" id="accessoryPrice" required>
+                          </div>
+                          <div class="mb-3">
+                            <label for="accessoryType" class="form-label">Loại</label>
+                            <select class="form-select" id="accessoryType" name="accessoryType" required>
+                              <option value="">Chọn loại...</option>
+                              <option value="Phụ kiện cho người">Phụ kiện cho người</option>
+                              <option value="Phụ kiện cho xe">Phụ kiện cho xe</option>
+                            </select>
+                          </div>
+                          <div class="mb-3">
+                            <label for="accessoryImage" class="form-label">Hình ảnh</label>
+                            <input type="file" class="form-control" id="accessoryImage" accept="image/*">
+                          </div>
+                          <button type="submit" class="btn btn-primary">Lưu</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Modal Người dùng -->
+                <div class="modal fade" id="userModal" tabindex="-1">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="userModalLabel">Thêm/Sửa người dùng</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                      </div>
+                      <div class="modal-body">
+                        <form id="userForm">
+                          <input type="hidden" id="userId">
+                          <div class="mb-3">
+                            <label for="userName" class="form-label">Tên</label>
+                            <input type="text" class="form-control" id="userName" required>
+                          </div>
+                          <div class="mb-3">
+                            <label for="userEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="userEmail" required>
+                          </div>
+                          <div class="mb-3">
+                            <label for="userRole" class="form-label">Vai trò</label>
+                            <input type="text" class="form-control" id="userRole" required>
+                          </div>
+                          <button type="submit" class="btn btn-primary">Lưu</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Modal Chi tiết đơn hàng -->
+                <div class="modal fade" id="orderDetailModal" tabindex="-1">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Chi tiết đơn hàng</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                      </div>
+                      <div class="modal-body" id="orderDetailBody">
+                        <!-- Nội dung chi tiết đơn hàng sẽ được render bằng JS -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Modal Chi tiết liên hệ -->
+                <div class="modal fade" id="contactDetailModal" tabindex="-1">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Chi tiết liên hệ</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                      </div>
+                      <div class="modal-body" id="contactDetailBody">
+                        <!-- Nội dung chi tiết liên hệ sẽ được render bằng JS -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
             </div>
-          </div>
-          <!-- Modal Phụ kiện -->
-          <div class="modal fade" id="accessoryModal" tabindex="-1">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="accessoryModalLabel">
-                    Thêm/Sửa phụ kiện
-                  </h5>
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                  ></button>
-                </div>
-                <div class="modal-body">
-                  <form id="accessoryForm">
-                    <input type="hidden" id="accessoryId" />
-                    <div class="mb-3">
-                      <label for="accessoryName" class="form-label"
-                        >Tên phụ kiện</label
-                      >
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="accessoryName"
-                        required
-                      />
-                    </div>
-                    <div class="mb-3">
-                      <label for="accessoryPrice" class="form-label">Giá</label>
-                      <input
-                        type="number"
-                        class="form-control"
-                        id="accessoryPrice"
-                        required
-                      />
-                    </div>
-                    <div class="mb-3">
-                      <label for="accessoryType" class="form-label">Loại</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="accessoryType"
-                        required
-                      />
-                    </div>
-                    <button type="submit" class="btn btn-primary">Lưu</button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Modal Người dùng -->
-          <div class="modal fade" id="userModal" tabindex="-1">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="userModalLabel">
-                    Thêm/Sửa người dùng
-                  </h5>
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                  ></button>
-                </div>
-                <div class="modal-body">
-                  <form id="userForm">
-                    <input type="hidden" id="userId" />
-                    <div class="mb-3">
-                      <label for="userName" class="form-label">Tên</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="userName"
-                        required
-                      />
-                    </div>
-                    <div class="mb-3">
-                      <label for="userEmail" class="form-label">Email</label>
-                      <input
-                        type="email"
-                        class="form-control"
-                        id="userEmail"
-                        required
-                      />
-                    </div>
-                    <div class="mb-3">
-                      <label for="userRole" class="form-label">Vai trò</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="userRole"
-                        required
-                      />
-                    </div>
-                    <button type="submit" class="btn btn-primary">Lưu</button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Modal Chi tiết đơn hàng -->
-          <div class="modal fade" id="orderDetailModal" tabindex="-1">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title">Chi tiết đơn hàng</h5>
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                  ></button>
-                </div>
-                <div class="modal-body" id="orderDetailBody">
-                  <!-- Nội dung chi tiết đơn hàng sẽ được render bằng JS -->
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Modal Chi tiết liên hệ -->
-          <div class="modal fade" id="contactDetailModal" tabindex="-1">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title">Chi tiết liên hệ</h5>
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                  ></button>
-                </div>
-                <div class="modal-body" id="contactDetailBody">
-                  <!-- Nội dung chi tiết liên hệ sẽ được render bằng JS -->
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
     <script src="Assets\bootstrap-5.0.2-dist\js\bootstrap.bundle.min.js"></script>
     <script src="Assets\js\Admin.js"></script>
-  </body>
-</html>
+</body>
+</html> 
